@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+$mainColor: #2b2b2b;
+$secondColor: #295b8a;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav-section {
+  margin-bottom: 1em;
+  // background-color: blue;
+  height: 8vh;
+  .nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em;
+    padding-top: 1em;
+    max-width: 1408px;
+    margin: 0 auto;
+    h2 {
+      font-family: "Limelight", sans-serif;
+      letter-spacing: 2px;
+      color: white;
+    }
+    a {
+      text-decoration: none;
+      margin: 0 4em;
+      color: black;
+      letter-spacing: 1px;
+      font-family: "poppins";
+      font-weight: smaller;
+      color: white;
+    }
+    i {
+      font-size: 2em;
+      background-color: white;
+      padding: 7.5px 15px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+}
+.hero-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1408px;
+  margin: 0 auto;
+  margin-top: 12em;
+  padding: 0 2em;
+  .hero-text {
+    color: white;
+    h1 {
+      font-family: "poppins";
+      font-size: 4em;
+      letter-spacing: 2px;
+      line-height: 80px;
+    }
+    p {
+      max-width: 25em;
+      margin-top: 20px;
+      letter-spacing: 0.5px;
+      font-size: 1.3em;
+    }
+    span {
+      font-size: 1.6em;
+    }
+  }
+  .hero-img {
+    img {
+      width: 100%;
+    }
+  }
+}
+.learn-more {
+  position: absolute;
+  bottom: 30px;
+  left: 45%;
+  color: $secondColor;
+  cursor: pointer;
+  h3 {
+    letter-spacing: 2px;
+    font-family: "poppins";
+  }
+}
+.main-section {
+  position: relative;
+  background-image: url("/Custom-Pc/images/Custom Pc_00146.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.service {
+  height: 40vh;
+  position: relative;
+  background: url(/Custom-Pc/images/service-section.jpg) center no-repeat;
+  background-attachment: fixed;
+  margin-bottom: 2em;
+  .service-content {
+    max-width: 1408px;
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    position: relative;
+    .service-text {
+      color: white;
+      max-width: 600px;
+      font-size: 1.7em;
+      letter-spacing: 1.5px;
+      margin-top: 4em;
+      margin-left: 1em;
+      text-align: center;
+      font-family: "poppins";
+    }
+    .slider-container {
+      margin-top: 7em;
+      margin-right: 4em;
+      position: relative;
+      // height: 200px;
+      // width: 200px;
+      overflow: hidden;
+      .image-slider {
+        display: flex;
+        height: 200px;
+        width: 200px;
+        // transition: 0.5s ease-in-out;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      i {
+        color: white;
+        font-size: 2em;
+        cursor: pointer;
+      }
+      .fa-arrow-alt-circle-left {
+        position: absolute;
+        top: 65%;
+        z-index: 2;
+        margin-right: 2em;
+      }
+      .fa-arrow-alt-circle-right {
+        position: absolute;
+        top: 65%;
+        z-index: 2;
+        right: 0;
+      }
+    }
+  }
+}
+.products-section {
+  height: 140vh;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  position: relative;
+  .products-center {
+    max-width: 1408px;
+    margin: 0 auto;
+    .product-title {
+      text-align: center;
+      font-family: "poppins";
+      letter-spacing: 2px;
+      word-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .product-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2em;
+      .button {
+        padding: 1em 2em;
+        margin: 0 2em;
+        cursor: pointer;
+        border-radius: 50px;
+      }
+      .btn1 {
+        background: $mainColor;
+        color: white;
+      }
+      .btn2 {
+        background: $secondColor;
+        color: white;
+      }
+      .btn3 {
+        background: $mainColor;
+        color: white;
+      }
+    }
+    .product-info {
+      display: flex;
+      align-items: center;
+      padding: 1em;
+      max-width: 980px;
+      margin: 5em auto;
+      img {
+        width: 200px;
+      }
+      p {
+        text-align: center;
+        margin-left: 30px;
+        font-size: 1.5em;
+      }
+    }
+    .products {
+      margin-top: 3em;
+      padding: 0 1em;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-column-gap: 1.5em;
+      .product-cpu {
+        .cpu-title {
+          text-align: center;
+          font-size: 2em;
+          margin-bottom: 1em;
+        }
+        .cpu-container {
+          position: relative;
+          overflow: hidden;
+          // max-width: 500px;
+          margin-bottom: 2em;
+          background-color: $mainColor;
+
+          .info {
+            font-size: 4em;
+            color: white;
+            letter-spacing: 2px;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            top: 35%;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+            // margin-top: 4em;
+          }
+          img {
+            width: 100%;
+            z-index: -1;
+          }
+          .cpu-btn {
+            word-spacing: 2px;
+            padding: 0.7em 2em;
+            letter-spacing: 2px;
+            border: none;
+            background: $mainColor;
+            color: white;
+            border-radius: 10px;
+            min-width: 200px;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 80%;
+            transform: translateX(-100%);
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+          }
+        }
+        .cpu:hover .info {
+          opacity: 1;
+        }
+        .cpu:hover .cpu-btn {
+          transform: translateX(0%);
+        }
+        .cpu:hover .cpu-container img {
+          opacity: 0.3;
+        }
+      }
+      .product-gpu {
+        .gpu-title {
+          text-align: center;
+          font-size: 2em;
+          margin-bottom: 1em;
+        }
+        .gpu-container {
+          position: relative;
+          overflow: hidden;
+          // max-width: 500px;
+          margin-bottom: 2em;
+          background-color: $mainColor;
+          transition: 0.2s ease-in;
+          .info {
+            font-size: 4em;
+            color: white;
+            letter-spacing: 2px;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            top: 35%;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+            // margin-top: 4em;
+          }
+          img {
+            width: 100%;
+            z-index: -1;
+          }
+          .gpu-btn {
+            word-spacing: 2px;
+            padding: 0.7em 2em;
+            letter-spacing: 2px;
+            border: none;
+            background: $mainColor;
+            color: white;
+            border-radius: 10px;
+            min-width: 200px;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 80%;
+            transform: translateX(-100%);
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+          }
+        }
+        .gpu:hover .info {
+          opacity: 1;
+        }
+        .gpu:hover .gpu-btn {
+          transform: translateX(0%);
+        }
+        .gpu:hover .gpu-container img {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+}
+.game {
+  height: 110vh;
+  background: url("/Custom-Pc/images/service-section.jpg") center no-repeat;
+  h2 {
+    color: white;
+    text-align: center;
+    padding: 3em 2em;
+    font-family: "poppins";
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    margin-top: 2em;
+  }
+  .game-center {
+    max-width: 1408px;
+    margin: 0 auto;
+    padding: 0 5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    .game-container {
+      width: 400px;
+      position: relative;
+      background-color: $mainColor;
+    }
+    img {
+      width: 100%;
+      transition: 0.3s ease-in;
+    }
+    .game-select {
+      padding: 0.5em 2em;
+      min-width: 200px;
+      font-size: 1.5em;
+      border-radius: 20px;
+      border: none;
+      background-color: $secondColor;
+      color: white;
+      position: absolute;
+      left: 25%;
+      top: 45%;
+      cursor: pointer;
+      transition: 0.2s ease-in;
+      opacity: 0;
+    }
+    .games:hover .game-select {
+      opacity: 1;
+    }
+    .games:hover .game-container img {
+      opacity: 0.6;
+    }
+  }
+}
+footer {
+  background: $mainColor;
+  margin-top: -1em;
+  height: 10vh;
+  .footer-center {
+    max-width: 1408px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+      padding: 1em;
+      font-family: "Limelight";
+      letter-spacing: 2px;
+      color: white;
+    }
+    .social {
+      padding: 1em;
+      color: white;
+      i {
+        margin: 0 2em;
+        font-size: 2em;
+        cursor: pointer;
+      }
+    }
+  }
+}
