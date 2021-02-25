@@ -7,6 +7,162 @@
           box-sizing: border-box;
 }
 
+.build {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 20;
+  font-family: "poppins";
+  background: white;
+  overflow-y: scroll;
+  border-top-left-radius: 20px;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.build header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+}
+
+.build header i {
+  font-size: 2em;
+  margin: 0 2em;
+  cursor: pointer;
+}
+
+.build header h1 {
+  margin-left: 1em;
+}
+
+.build .products-container .title {
+  text-align: center;
+  background-color: #2b2b2b;
+  padding: 1em;
+  border-radius: 50px;
+  margin: 1em 4em;
+  color: white;
+  font-size: 1em;
+}
+
+.build .products-container .build-cpu {
+  margin: 1em 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.build .products-container .build-cpu .build-info {
+  letter-spacing: 2px;
+  margin-left: 2em;
+}
+
+.build .products-container .build-cpu img {
+  width: 150px;
+  height: 150px;
+}
+
+.build .products-container .build-cpu .remove {
+  cursor: pointer;
+}
+
+.build .products-container .build-gpu {
+  margin: 1em 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.build .products-container .build-gpu .build-info {
+  letter-spacing: 2px;
+  margin-left: 2em;
+}
+
+.build .products-container .build-gpu img {
+  width: 150px;
+  height: 150px;
+}
+
+.build .products-container .build-gpu .remove {
+  cursor: pointer;
+}
+
+.build .components-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2em 5em;
+}
+
+.build .components-container .components-logo img {
+  width: 250px;
+  height: 250px;
+  margin-right: 1em;
+}
+
+.build .components-container .components-info {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.build .game-build {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em 5em;
+}
+
+.build .game-build img {
+  width: 250px;
+  height: 250px;
+  margin-left: 5em;
+}
+
+.build .build-footer {
+  margin-top: 4em;
+  margin-bottom: 2em;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.build .build-footer .clear-build {
+  margin-top: 1em;
+  padding: 0.5em 2em;
+  font-size: 2em;
+  width: 300px;
+  background-color: #2b2b2b;
+  color: white;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.build .build-footer .clear-build:hover {
+  color: #2b2b2b;
+  background-color: white;
+}
+
 .nav-section {
   margin-bottom: 1em;
   height: 8vh;
@@ -417,6 +573,7 @@
 }
 
 .game {
+  width: 100%;
   height: 110vh;
   background: url("/Custom-Pc/images/service-section.jpg") center no-repeat;
 }
@@ -516,5 +673,114 @@ footer .footer-center .social i {
   margin: 0 2em;
   font-size: 2em;
   cursor: pointer;
+}
+
+.components-model {
+  position: fixed;
+  width: 1000px;
+  height: 730px;
+  z-index: 30;
+  background: url("/Custom-Pc/images/com-background.png");
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+  top: 50%;
+  left: 35%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.components-model .com-header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2em;
+}
+
+.components-model h2 {
+  text-align: center;
+  letter-spacing: 2px;
+  color: white;
+  font-family: "poppins";
+}
+
+.components-model .com-model-center {
+  margin-top: 2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-row-gap: 20px;
+  text-align: center;
+}
+
+.components-model .com-model-center img {
+  width: 200px;
+}
+
+.games-model {
+  position: fixed;
+  width: 1000px;
+  height: 730px;
+  z-index: 30;
+  background: url("/Custom-Pc/images/com-background.png");
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+  top: 50%;
+  left: 35%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.games-model .games-header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2em;
+}
+
+.games-model h2 {
+  text-align: center;
+  letter-spacing: 2px;
+  color: white;
+  font-family: "poppins";
+}
+
+.games-model .games-model-center {
+  margin-top: 2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-row-gap: 20px;
+  text-align: center;
+}
+
+.games-model .games-model-center img {
+  width: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  .build {
+    width: 30vw;
+    min-width: 450px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
