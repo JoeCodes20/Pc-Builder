@@ -258,12 +258,6 @@ class UI {
             gameModel.classList.remove('showGame')
     })
     }
-    showGamesSelected(){
-        gamesLogo.addEventListener('click', ()=> {
-            gameModel.classList.toggle('showGame')
-            comLogo.classList.remove('showCom')
-        })
-    }
     comInfo(){
         let item = JSON.parse(localStorage.getItem('path'))
         item = item.map(item => item.id)
