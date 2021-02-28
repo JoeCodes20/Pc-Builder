@@ -9,15 +9,16 @@
 </head>
 <!-- <i class="fab fa-ethereum"></i> build manager -->
 <body>
+   
     <div class="build">
         <header>
-            <i class="far fa-window-close"></i>
-            <h1>Build Path</h1>
+            <span class="closeBuild"><i class="far fa-window-close"></i></span>
+            <h1>Build Manager</h1>
         </header>
         <hr>
         <div class="products-container">
-            <h2 class="title">PerFormance</h2>
-            <div class="build-cpu">
+            <div class="title"><h2>Your build</h2></div>
+            <!-- <div class="build-cpu">
                 <img src="/Custom-Pc/images/parts/i9 10900.png" alt="">
                 <div class="build-info">
                     <h2>i9 10900</h2>
@@ -32,29 +33,32 @@
                     <h3>$649.99</h3>
                     <span class="remove">remove</span>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="components-container">
             <span class="components-logo">
-                <img src="/Custom-Pc/images/components.png" alt="">
+                <img src="/Custom-Pc/images/components/com-logo.png" alt="">
             </span>
             <div class="components-info">
-                <h2>Components <br><span class="components-price">$300</span></h2>
+                <h2>Components <br><span class="components-price">$...</span></h2>
             </div>
         </div>
-        <div class="game-build">
+        <!-- <div class="game-build">
             <h2>Games <br>Selected</h2>
+            <span class="game-logo">
             <img src="/Custom-Pc/images/games-selected.png" alt="">
-        </div>
+            </span>
+        </div> -->
         <div class="build-footer">
             <div class="build-total">
                 <h2>Your Total:
-                    <span class="InBuild-total">$0</span>
+                    <div class="inBuild-total">$0</div>
                 </h2>
                 <button class="clear-build">Clear Build</button>
             </div>
         </div>
     </div>
+    <div class="build-overlay"></div>
     <div class="components-model">
         <div class="com-header">
             <!-- <i class="far fa-window-close close-model-com"></i> -->
@@ -79,9 +83,8 @@
             </div>
         </div>
     </div>
-    <div class="games-model">
+    <!-- <div class="games-model">
         <div class="games-header">
-            <!-- <i class="far fa-window-close close-model-com"></i> -->
             <h2>Selected Games</h2>
         </div>
         <div class="games-model-center">
@@ -102,19 +105,19 @@
                 <h2>Title <br><span class="com-price">FPS: </span></h2>
             </div>
         </div>
-    </div>
-    <main class="main-section">
-        <nav class="nav-section"> 
+    </div> -->
+    <nav class="nav-section"> 
             <div class="nav-center">
-                <h2>Components</h2>
+                <a href="#" class="homeBtn"><h2>Components</h2></a>
                 <ul>
-                    <a href="#">Services</a>
-                    <a href="#">Products</a>
-                    <a href="#">Games</a>
+                    <a href="#" class="servicesBtn">Services</a>
+                    <a href="#" class="productsBtn">Products</a>
+                    <a href="#" class="gamesBtn">Games</a>
                 </ul>
                 <i class="fab fa-ethereum"></i>
             </div>
         </nav>
+    <section class="main-section">
         <div class="hero-section">
             <div class="hero-text">
                 <h1><span>Building</span> <br>Made Simple</h1>
@@ -127,7 +130,7 @@
         <div class="learn-more">
             <h3>Learn More &#8595 </h3>
         </div>
-    </main>
+    </section>
     <section class="service">
         <div class="service-content">
             <div class="service-text">
@@ -155,73 +158,71 @@
                 <button class="btn3 button">Enthusiast</button>
             </div>
             <div class="product-info">
-                <img src="/Custom-Pc/images/budget.png" alt="">
-                <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit dignissimos nulla nam architecto asperiores unde exercitationem minus, iure animi illum sint incidunt ea omnis odit id? Libero mollitia dolorem rem!</p>
+                <!-- <img src="/Custom-Pc/images/budget.png" alt="">
+                <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit dignissimos nulla nam architecto asperiores unde exercitationem minus, iure animi illum sint incidunt ea omnis odit id? Libero mollitia dolorem rem!</p> -->
             </div>
             <hr>
             <div class="products">
                 <div class="product-cpu">
                     <h2 class="cpu-title">Recomended Cpu</h2>
-                    <article class="cpu">
+                    <!-- <article class="cpu">
                         <div class="cpu-container">
                             <img src="/Custom-Pc/images/Amd Ryzen 3.png" alt="">
                             <h2 class="cpu-hover-name info">Amd Ryzen 3 <br> <hr> <span>$89.99</span></h2>
-                            <!-- <h3 class="cpu-hover-price info">$89.99</h3> -->
                             <button class="cpu-btn"><i class="fas fa-toolbox"></i>Add to Buld</button>
                         </div>
-                    </article>
+                    </article> -->
                 </div>
                 <div class="product-gpu">
                     <h2 class="gpu-title">Recomended Gpu</h2>
-                    <article class="gpu">
+                    <!-- <article class="gpu">
                         <div class="gpu-container">
                             <img src="/Custom-Pc/images/Rtx 2080.png" alt="">
                             <h2 class="gpu-hover-name info">Rtx 2080 <br> <hr> <span>$450</span></h2>
-                            <!-- <h3 class="gpu-hover-price info">$450</h3> -->
                             <button class="gpu-btn"><i class="fas fa-toolbox"></i>Add to Buld</button>
                         </div>
-                    </article>
+                    </article> -->
                 </div>
             </div>
         </div>
     </section>
     <section class="game">
-        <h2>Select from top rated games</h2>
+        <h2>Averages for top rated games</h2>
         <div class="game-center">
             <article class="games">
                 <div class="game-container">
                     <img src="/Custom-Pc/images/games/Apexlegends.png" alt="">
-                    <button class="game-select" data-id="1">Select</button>
+                    <button class="average first" data-id="1">Average Fps:</button>
                 </div>
             </article>
             <article class="games">
                 <div class="game-container">
                     <img src="/Custom-Pc/images/games/Csgo.png" alt="">
-                    <button class="game-select" data-id="2">Select</button>
+                    <button class="average second" data-id="2">Average Fps:</button>
                 </div>
             </article>
             <article class="games">
                 <div class="game-container">
                     <img src="/Custom-Pc/images/games/Cyberpunk.png" alt="">
-                    <button class="game-select" data-id="3">Select</button>
+                    <button class="average third" data-id="3">Average Fps:</button>
                 </div>
             </article>
             <article class="games">
                 <div class="game-container">
                     <img src="/Custom-Pc/images/games/Fortnite.png" alt="">
-                    <button class="game-select" data-id="4">Select</button>
+                    <button class="average forth" data-id="4">Average Fps:</button>
                 </div>
             </article>
             <article class="games">
                 <div class="game-container">
                     <img src="/Custom-Pc/images/games/Rocketleage.png" alt="">
-                    <button class="game-select" data-id="5">Select</button>
+                    <button class="average fifth" data-id="5">Average Fps:</button>
                 </div>
             </article>
             <article class="games">
                 <div class="game-container">
                     <img src="/Custom-Pc/images/games/The-Witcher.png" alt="">
-                    <button class="game-select" data-id="6">Select</button>
+                    <button class="average sixth" data-id="6">Average Fps:</button>
                 </div>
             </article>
         </div>

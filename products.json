@@ -1,0 +1,45 @@
+{
+    "Basic":[
+        
+        {
+            "id": 1,
+            "title": "Amd Ryzen 3",
+            "price": 99.99,
+            "image": "./images/parts/Amd Ryzen 3.png"
+        },
+        {
+            "id": 2,
+            "title": "Rx 570",
+            "price": 209.99,
+            "image": "./images/parts/Rx 570.png"
+        }
+    ],
+    "Performance":[
+        {
+            "id": 3,
+            "title": "Amd Ryzen 5",
+            "price": 199.99,
+            "image": "./images/parts/Amd Ryzen 5.png"
+        },
+        {
+            "id": 4,
+            "title": "Rtx 2070",
+            "price": 399.99,
+            "image": "./images/parts/Rtx 2070.png"
+        }
+    ],
+    "Enthusiast":[
+        {
+            "id": 5,
+            "title": "Intel i9 10900",
+            "price": 449.99,
+            "image": "./images/parts/i9 10900.png"
+        },
+        {
+            "id": 6,
+            "title": "Rtx 3080",
+            "price": 499.99,
+            "image": "./images/parts/Rtx 3080.png"
+        }
+    ]
+}

@@ -18,8 +18,8 @@
   background: white;
   overflow-y: scroll;
   border-top-left-radius: 20px;
-  -webkit-transition: 1s ease-in;
-  transition: 1s ease-in;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
 }
@@ -42,17 +42,21 @@
 }
 
 .build header h1 {
-  margin-left: 1em;
+  margin-left: 0em;
 }
 
 .build .products-container .title {
   text-align: center;
-  background-color: #2b2b2b;
-  padding: 1em;
-  border-radius: 50px;
-  margin: 1em 4em;
+  margin: 1em 0em;
   color: white;
   font-size: 1em;
+}
+
+.build .products-container .title h2 {
+  background-color: #2b2b2b;
+  border-radius: 50px;
+  padding: 1em 0;
+  margin: 0em 4em;
 }
 
 .build .products-container .build-cpu {
@@ -113,6 +117,10 @@
   margin: 2em 5em;
 }
 
+.build .components-container .components-logo {
+  cursor: pointer;
+}
+
 .build .components-container .components-logo img {
   width: 250px;
   height: 250px;
@@ -132,6 +140,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 1em 5em;
+  cursor: pointer;
 }
 
 .build .game-build img {
@@ -163,9 +172,34 @@
   background-color: white;
 }
 
+.build-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 19;
+  opacity: 0.5;
+  display: none;
+}
+
+.showBuild {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.showOverlay {
+  display: block;
+}
+
 .nav-section {
-  margin-bottom: 1em;
+  background: url("/Custom-Pc/images/Custom Pc_00146.png") center;
   height: 8vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 9;
 }
 
 .nav-section .nav-center {
@@ -184,10 +218,12 @@
   margin: 0 auto;
 }
 
-.nav-section .nav-center h2 {
+.nav-section .nav-center .homeBtn {
   font-family: "Limelight", sans-serif;
   letter-spacing: 2px;
   color: white;
+  margin-left: -2em;
+  margin-right: -10em;
 }
 
 .nav-section .nav-center a {
@@ -205,7 +241,7 @@
   background-color: white;
   padding: 7.5px 15px;
   border: none;
-  border-radius: 50%;
+  border-radius: 50px;
   cursor: pointer;
 }
 
@@ -213,8 +249,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -223,12 +257,12 @@
           justify-content: space-between;
   max-width: 1408px;
   margin: 0 auto;
-  margin-top: 12em;
   padding: 0 2em;
 }
 
 .hero-section .hero-text {
   color: white;
+  margin-top: 10em;
 }
 
 .hero-section .hero-text h1 {
@@ -250,6 +284,7 @@
 }
 
 .hero-section .hero-img img {
+  margin-top: 10em;
   width: 100%;
 }
 
@@ -271,7 +306,7 @@
   background-image: url("/Custom-Pc/images/Custom Pc_00146.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: calc(100vh - 60px);
 }
 
 .service {
@@ -412,6 +447,9 @@
   padding: 1em;
   max-width: 980px;
   margin: 5em auto;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+  opacity: 0;
 }
 
 .products-section .products-center .product-info img {
@@ -432,6 +470,8 @@
   -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-column-gap: 1.5em;
+  -webkit-transition: 0.8s ease-in;
+  transition: 0.8s ease-in;
 }
 
 .products-section .products-center .products .product-cpu .cpu-title {
@@ -458,6 +498,8 @@
   opacity: 0;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+  border: black 2px solid;
+  background: black;
 }
 
 .products-section .products-center .products .product-cpu .cpu-container img {
@@ -513,8 +555,6 @@
   overflow: hidden;
   margin-bottom: 2em;
   background-color: #2b2b2b;
-  -webkit-transition: 0.2s ease-in;
-  transition: 0.2s ease-in;
 }
 
 .products-section .products-center .products .product-gpu .gpu-container .info {
@@ -528,6 +568,8 @@
   opacity: 0;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+  border: black 2px solid;
+  background: black;
 }
 
 .products-section .products-center .products .product-gpu .gpu-container img {
@@ -612,24 +654,25 @@
   transition: 0.3s ease-in;
 }
 
-.game .game-center .game-select {
+.game .game-center .average {
   padding: 0.5em 2em;
   min-width: 200px;
+  max-width: 300px;
   font-size: 1.5em;
   border-radius: 20px;
   border: none;
-  background-color: #295b8a;
+  background-color: #0077ff;
   color: white;
   position: absolute;
   left: 25%;
   top: 45%;
-  cursor: pointer;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
   opacity: 0;
+  pointer-events: none;
 }
 
-.game .game-center .games:hover .game-select {
+.game .game-center .games:hover .average {
   opacity: 1;
 }
 
@@ -689,6 +732,8 @@ footer .footer-center .social i {
           transform: translate(-50%, -50%);
   opacity: 0;
   pointer-events: none;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .components-model .com-header {
@@ -726,55 +771,8 @@ footer .footer-center .social i {
   width: 200px;
 }
 
-.games-model {
-  position: fixed;
-  width: 1000px;
-  height: 730px;
-  z-index: 30;
-  background: url("/Custom-Pc/images/com-background.png");
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
-  top: 50%;
-  left: 35%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  opacity: 0;
-  pointer-events: none;
-}
-
-.games-model .games-header {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 2em;
-}
-
-.games-model h2 {
-  text-align: center;
-  letter-spacing: 2px;
-  color: white;
-  font-family: "poppins";
-}
-
-.games-model .games-model-center {
-  margin-top: 2em;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-row-gap: 20px;
-  text-align: center;
-}
-
-.games-model .games-model-center img {
-  width: 200px;
+.showCom {
+  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
