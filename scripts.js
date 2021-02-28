@@ -2,14 +2,19 @@
 const serviceBtn = document.querySelector('.servicesBtn')
 const productsBtn = document.querySelector('.productsBtn')
 const gamesBtn = document.querySelector('.gamesBtn')
-const serviceSection = document.querySelector('.service')
-const productsSection = document.querySelector('.products-section')
+const serviceSection = document.querySelector('.service-content')
+const productsSection = document.querySelector('.products-center')
 const gameSection = document.querySelector('.game')
 const homeBtn = document.querySelector('.homeBtn')
 const home = document.querySelector('.main-section')
+const learnMore = document.querySelector('.learn-more')
+learnMore.addEventListener('click', (e)=>{
+    e.preventDefault()
+    serviceSection.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+})
 serviceBtn.addEventListener('click', (e)=>{
     e.preventDefault()
-    serviceSection.scrollIntoView({behavior: "smooth"})
+    serviceSection.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
 })
 productsBtn.addEventListener('click', (e)=>{
     e.preventDefault()
@@ -213,6 +218,7 @@ class UI {
             cpuBtn.innerText = 'Added to build'
             // buildTotal.innerText = Number(comPrice.innerText) =+ cpu.price
             this.calcTotal(cpu.price)
+            this.openBuild()
         })
         gpuBtn.addEventListener('click', ()=>{
            
@@ -229,6 +235,7 @@ class UI {
             gpuBtn.innerText= 'Added To Build'
             // buildTotal.innerText = Number(comPrice.innerText) =+ gpu.price
             this.calcTotal(gpu.price)
+            this.openBuild()
         })
     }
     calcTotal(number){

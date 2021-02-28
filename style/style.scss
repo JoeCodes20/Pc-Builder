@@ -149,9 +149,10 @@ $secondColor: #295b8a;
 .nav-section {
   // margin-bottom: 1em;
   // background-color: blue;
-  background: url("/Custom-Pc/images/Custom\ Pc_00146.png") center;
+  // background: url("/Custom-Pc/images/SigSeries-Menu-Background.jpg")
+  // center;
   height: 8vh;
-  position: sticky;
+  // position: sticky;
   top: 0;
   z-index: 9;
   .nav-center {
@@ -238,14 +239,14 @@ $secondColor: #295b8a;
   background-image: url("/Custom-Pc/images/Custom Pc_00146.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: calc(100vh - 60px);
+  height: 100vh;
 }
 .service {
   height: 40vh;
   position: relative;
   background: url(/Custom-Pc/images/service-section.jpg) center no-repeat;
   background-attachment: fixed;
-  margin-bottom: 2em;
+  // margin-bottom: 2em;
   .service-content {
     max-width: 1408px;
     margin: 0 auto;
@@ -302,18 +303,21 @@ $secondColor: #295b8a;
 }
 .products-section {
   height: 140vh;
-  margin-top: 2em;
+  // margin-top: 6em;
   margin-bottom: 2em;
   position: relative;
   .products-center {
     max-width: 1408px;
     margin: 0 auto;
+    .background {
+    }
     .product-title {
       text-align: center;
       font-family: "poppins";
       letter-spacing: 2px;
       word-spacing: 2px;
       text-transform: uppercase;
+      z-index: 8;
     }
     .product-buttons {
       display: flex;
@@ -325,6 +329,7 @@ $secondColor: #295b8a;
         margin: 0 2em;
         cursor: pointer;
         border-radius: 50px;
+        border: none;
       }
       .btn1 {
         background: $mainColor;
