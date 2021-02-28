@@ -373,6 +373,4 @@ ui.addToBuild()
 ui.buildLogic()
 ui.comUI()
 ui.comInfo()
-ui.showGamesSelected()
-ui.getGameSelected()
-ui.calcGameFps()
+
