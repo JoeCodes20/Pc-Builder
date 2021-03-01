@@ -97,57 +97,84 @@ const theWitcher = document.querySelector('.sixth')
 class ProductBtn {
     getPathBtn(){
        budgetBtn.addEventListener('click', ()=>{
-        Storage.clearPath()
+        // Storage.clearPath()
            fetch('products.json')
            .then(response => response.json())
            .then(data => data.Basic)
            .then(basic => Storage.savePath(basic))
+           .then(info => {productInfo.innerHTML = 
+            `<img src="images/budget.png" alt="">
+            <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Fugit dignissimos nulla nam architecto asperiores unde exercitationem minus, iure animi illum sint incidunt ea omnis odit id? 
+            Libero mollitia dolorem rem!</p>`;
+            productInfo.style.opacity = 1
+            buildTitle.innerHTML = '<h2>Budget</h2>'
+            Storage.info(productInfo.innerHTML)
+            Storage.title(buildTitle.innerHTML)})
            .catch(err => console.log(err))
-           productInfo.innerHTML = 
-           `<img src="images/budget.png" alt="">
-           <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-           Fugit dignissimos nulla nam architecto asperiores unde exercitationem minus, iure animi illum sint incidunt ea omnis odit id? 
-           Libero mollitia dolorem rem!</p>`;
-           productInfo.style.opacity = 1
-           buildTitle.innerHTML = '<h2>Budget</h2>'
-           Storage.info(productInfo.innerHTML)
-           Storage.title(buildTitle.innerHTML)
+        //    productInfo.innerHTML = 
+        //    `<img src="images/budget.png" alt="">
+        //    <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        //    Fugit dignissimos nulla nam architecto asperiores unde exercitationem minus, iure animi illum sint incidunt ea omnis odit id? 
+        //    Libero mollitia dolorem rem!</p>`;
+        //    productInfo.style.opacity = 1
+        //    buildTitle.innerHTML = '<h2>Budget</h2>'
+        //    Storage.info(productInfo.innerHTML)
+        //    Storage.title(buildTitle.innerHTML)
            location.reload();
        }) 
        performanceBtn.addEventListener('click', ()=>{
-        Storage.clearPath()
+        // Storage.clearPath()
            fetch('products.json')
            .then(response => response.json())
            .then(data => data.Performance)
            .then(performance => Storage.savePath(performance))
            .catch(err => console.log(err))
-           productInfo.innerHTML = 
-           `<p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-           Fugit dignissimos nulla nam architecto asperiores unde exercitationem minus, iure animi illum sint incidunt ea omnis odit id? 
-           Libero mollitia dolorem rem!</p>
-           <img src="images/Performance.png" alt="">`;
-           productInfo.style.opacity = 1
-           buildTitle.innerHTML = `<h2>PerFormance</h2>`
-           Storage.info(productInfo.innerHTML)
-           Storage.title(buildTitle.innerHTML)
+           .then(info => {productInfo.innerHTML = 
+            `<p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Fugit dignissimos nulla nam architecto asperiores unde exercitationem minus, iure animi illum sint incidunt ea omnis odit id? 
+            Libero mollitia dolorem rem!</p>
+            <img src="images/Performance.png" alt="">`;
+            productInfo.style.opacity = 1
+            buildTitle.innerHTML = `<h2>PerFormance</h2>`
+            Storage.info(productInfo.innerHTML)
+            Storage.title(buildTitle.innerHTML)})
+        //    productInfo.innerHTML = 
+        //    `<p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        //    Fugit dignissimos nulla nam architecto asperiores unde exercitationem minus, iure animi illum sint incidunt ea omnis odit id? 
+        //    Libero mollitia dolorem rem!</p>
+        //    <img src="images/Performance.png" alt="">`;
+        //    productInfo.style.opacity = 1
+        //    buildTitle.innerHTML = `<h2>PerFormance</h2>`
+        //    Storage.info(productInfo.innerHTML)
+        //    Storage.title(buildTitle.innerHTML)
            location.reload();
        }) 
        enthusiastBtn.addEventListener('click', ()=>{
-        Storage.clearPath()
+        // Storage.clearPath()
            fetch('products.json')
            .then(response => response.json())
            .then(data => data.Enthusiast)
            .then(enthusiast => Storage.savePath(enthusiast))
+           .then(info => {productInfo.innerHTML = 
+            `<img src="images/enthusiast.png" alt="">
+            <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Fugit dignissimos nulla nam architecto asperiores unde exercitationem minus, iure animi illum sint incidunt ea omnis odit id? 
+            Libero mollitia dolorem rem!</p>`;
+            productInfo.style.opacity = 1
+            buildTitle.innerHTML = `<h2>Enthusiast</h2>`
+            Storage.info(productInfo.innerHTML)
+            Storage.title(buildTitle.innerHTML)})
            .catch(err => console.log(err))
-           productInfo.innerHTML = 
-           `<img src="images/enthusiast.png" alt="">
-           <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-           Fugit dignissimos nulla nam architecto asperiores unde exercitationem minus, iure animi illum sint incidunt ea omnis odit id? 
-           Libero mollitia dolorem rem!</p>`;
-           productInfo.style.opacity = 1
-           buildTitle.innerHTML = `<h2>Enthusiast</h2>`
-           Storage.info(productInfo.innerHTML)
-           Storage.title(buildTitle.innerHTML)
+        //    productInfo.innerHTML = 
+        //    `<img src="images/enthusiast.png" alt="">
+        //    <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        //    Fugit dignissimos nulla nam architecto asperiores unde exercitationem minus, iure animi illum sint incidunt ea omnis odit id? 
+        //    Libero mollitia dolorem rem!</p>`;
+        //    productInfo.style.opacity = 1
+        //    buildTitle.innerHTML = `<h2>Enthusiast</h2>`
+        //    Storage.info(productInfo.innerHTML)
+        //    Storage.title(buildTitle.innerHTML)
            location.reload();
        }) 
     }
