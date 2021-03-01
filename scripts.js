@@ -104,7 +104,7 @@ class ProductBtn {
            .then(basic => Storage.savePath(basic))
            .catch(err => console.log(err))
            productInfo.innerHTML = 
-           `<img src="/Custom-Pc/images/budget.png" alt="">
+           `<img src="images/budget.png" alt="">
            <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
            Fugit dignissimos nulla nam architecto asperiores unde exercitationem minus, iure animi illum sint incidunt ea omnis odit id? 
            Libero mollitia dolorem rem!</p>`;
@@ -125,7 +125,7 @@ class ProductBtn {
            `<p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
            Fugit dignissimos nulla nam architecto asperiores unde exercitationem minus, iure animi illum sint incidunt ea omnis odit id? 
            Libero mollitia dolorem rem!</p>
-           <img src="/Custom-Pc/images/Performance.png" alt="">`;
+           <img src="images/Performance.png" alt="">`;
            productInfo.style.opacity = 1
            buildTitle.innerHTML = `<h2>PerFormance</h2>`
            Storage.info(productInfo.innerHTML)
@@ -140,7 +140,7 @@ class ProductBtn {
            .then(enthusiast => Storage.savePath(enthusiast))
            .catch(err => console.log(err))
            productInfo.innerHTML = 
-           `<img src="/Custom-Pc/images/enthusiast.png" alt="">
+           `<img src="images/enthusiast.png" alt="">
            <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
            Fugit dignissimos nulla nam architecto asperiores unde exercitationem minus, iure animi illum sint incidunt ea omnis odit id? 
            Libero mollitia dolorem rem!</p>`;
@@ -272,19 +272,19 @@ class UI {
         if(val === 1){
             comCenter.innerHTML = `
             <div class="com">
-                <img src="${"/Custom-Pc/images/components/A520-Aorus(amd).png"}" alt="">
+                <img src="${"images/components/A520-Aorus(amd).png"}" alt="">
                 <h2>A520-Aorus <br><span class="com-price">$199.99</span></h2>
             </div>
             <div class="com">
-                <img src=${"/Custom-Pc/images/components/8gb-ram.png"} alt="">
+                <img src=${"images/components/8gb-ram.png"} alt="">
                 <h2>8gb Ram <br><span class="com-price">$79.99</span></h2>
             </div>
             <div class="com">
-                <img src=${"/Custom-Pc/images/components/1tb-hdd.png"} alt="">
+                <img src=${"images/components/1tb-hdd.png"} alt="">
                 <h2>1tb-hdd <br><span class="com-price">$59.99</span></h2>
             </div>
             <div class="com">
-                <img src="${"/Custom-Pc/images/components/Corsair-Tx650.png"}" alt="">
+                <img src="${"images/components/Corsair-Tx650.png"}" alt="">
                 <h2>Corsair Tx650 <br><span class="com-price">$109.99</span></h2>
             </div>`
             comPrice.innerText = `449.96`
@@ -298,19 +298,19 @@ class UI {
         }else if(val === 3){
             comCenter.innerHTML = `
             <div class="com">
-                <img src="${"/Custom-Pc/images/components/A520-Aorus(amd).png"}" alt="">
+                <img src="${"images/components/A520-Aorus(amd).png"}" alt="">
                 <h2>Title <br><span class="com-price">$199.99</span></h2>
             </div>
             <div class="com">
-                <img src=${"/Custom-Pc/images/components/8gb-ram.png"} alt="">
+                <img src=${"images/components/8gb-ram.png"} alt="">
                 <h2>8gb Ram <br><span class="com-price">$79.99</span></h2>
             </div>
             <div class="com">
-                <img src=${"/Custom-Pc/images/components/1tb-hdd.png"} alt="">
+                <img src=${"images/components/1tb-hdd.png"} alt="">
                 <h2>1tb-hdd<br><span class="com-price">$59.99</span></h2>
             </div>
             <div class="com">
-                <img src="${"/Custom-Pc/images/components/Corsair-Tx650.png"}" alt="">
+                <img src="${"images/components/Corsair-Tx650.png"}" alt="">
                 <h2>Corsair Tx650  <br><span class="com-price">$109.99</span></h2>
             </div>`
             comPrice.innerText = `449.96`
@@ -324,19 +324,19 @@ class UI {
         }else if(val === 5){
             comCenter.innerHTML = `
             <div class="com">
-                <img src="${"/Custom-Pc/images/components/Z490-Aorus.png"}" alt="">
+                <img src="${"images/components/Z490-Aorus.png"}" alt="">
                 <h2>Z490-Aorus <br><span class="com-price">$399.99</span></h2>
             </div>
             <div class="com">
-                <img src=${"/Custom-Pc/images/components/8gb-ram.png"} alt="">
+                <img src=${"images/components/8gb-ram.png"} alt="">
                 <h2>16gb Ram <br><span class="com-price">$109.99</span></h2>
             </div>
             <div class="com">
-                <img src=${"/Custom-Pc/images/components/SanDisk-ssd.png"} alt="">
+                <img src=${"images/components/SanDisk-ssd.png"} alt="">
                 <h2>SanDisk-ssd 1TB<br><span class="com-price">$89.99</span></h2>
             </div>
             <div class="com">
-                <img src="${"/Custom-Pc/images/components/Corsair-Tx650.png"}" alt="">
+                <img src="${"images/components/Corsair-Tx650.png"}" alt="">
                 <h2>Corsair Tx650  <br><span class="com-price">$109.99</span></h2>
             </div>`
             comPrice.innerText = `709.99`
