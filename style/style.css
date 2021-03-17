@@ -327,6 +327,14 @@
   position: relative;
 }
 
+.service .service-content .service-title {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  letter-spacing: 6px;
+  color: #295b8a;
+}
+
 .service .service-content .service-text {
   color: white;
   max-width: 600px;
@@ -341,7 +349,7 @@
 .service .service-content .slider-container {
   margin-top: 7em;
   margin-right: 4em;
-  position: relative;
+  width: 200px;
   overflow: hidden;
 }
 
@@ -369,6 +377,7 @@
   top: 65%;
   z-index: 2;
   margin-right: 2em;
+  left: 77%;
 }
 
 .service .service-content .slider-container .fa-arrow-alt-circle-right {
@@ -380,6 +389,7 @@
 
 .products-section {
   height: 140vh;
+  margin-top: 3em;
   margin-bottom: 2em;
   position: relative;
 }
@@ -441,12 +451,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1em;
+  padding: 2em 6em;
   max-width: 980px;
   margin: 5em auto;
   -webkit-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
   opacity: 0;
+  font-family: "poppins";
+  letter-spacing: 2px;
 }
 
 .products-section .products-center .product-info img {
@@ -484,6 +496,12 @@
   background-color: #2b2b2b;
 }
 
+.products-section .products-center .products .product-cpu .cpu-container .cpu-title {
+  color: #295b8a;
+  font-size: 1em;
+  letter-spacing: 4px;
+}
+
 .products-section .products-center .products .product-cpu .cpu-container .info {
   font-size: 4em;
   color: white;
@@ -495,8 +513,6 @@
   opacity: 0;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  border: black 2px solid;
-  background: black;
 }
 
 .products-section .products-center .products .product-cpu .cpu-container img {
@@ -524,8 +540,13 @@
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   cursor: pointer;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.products-section .products-center .products .product-cpu .cpu-btn:hover {
+  color: black;
+  background-color: white;
 }
 
 .products-section .products-center .products .product-cpu .cpu:hover .info {
@@ -538,7 +559,7 @@
 }
 
 .products-section .products-center .products .product-cpu .cpu:hover .cpu-container img {
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 .products-section .products-center .products .product-gpu .gpu-title {
@@ -554,6 +575,12 @@
   background-color: #2b2b2b;
 }
 
+.products-section .products-center .products .product-gpu .gpu-container .gpu-title {
+  color: #295b8a;
+  font-size: 1em;
+  letter-spacing: 4px;
+}
+
 .products-section .products-center .products .product-gpu .gpu-container .info {
   font-size: 4em;
   color: white;
@@ -565,8 +592,6 @@
   opacity: 0;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  border: black 2px solid;
-  background: black;
 }
 
 .products-section .products-center .products .product-gpu .gpu-container img {
@@ -594,8 +619,13 @@
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   cursor: pointer;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.products-section .products-center .products .product-gpu .gpu-btn:hover {
+  color: black;
+  background-color: white;
 }
 
 .products-section .products-center .products .product-gpu .gpu:hover .info {
@@ -614,7 +644,7 @@
 .game {
   width: 100%;
   height: 110vh;
-  background: url("/images/service-section.jpg") center no-repeat;
+  background: url("/images/game-background.png") center no-repeat;
 }
 
 .game h2 {
@@ -658,7 +688,7 @@
   font-size: 1.5em;
   border-radius: 20px;
   border: none;
-  background-color: #0077ff;
+  background-color: black;
   color: white;
   position: absolute;
   left: 25%;
@@ -678,7 +708,7 @@
 }
 
 footer {
-  background: #2b2b2b;
+  background: black;
   margin-top: -1em;
   height: 10vh;
 }
@@ -720,7 +750,7 @@ footer .footer-center .social i {
   width: 1000px;
   height: 730px;
   z-index: 30;
-  background: url("images/com-background.png");
+  background: url("/images/com-background.png");
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
   top: 50%;

@@ -254,6 +254,13 @@ $secondColor: #295b8a;
     align-content: center;
     justify-content: space-between;
     position: relative;
+    .service-title {
+      position: absolute;
+      top: 20%;
+      left: 0;
+      letter-spacing: 6px;
+      color: #295b8a;
+    }
     .service-text {
       color: white;
       max-width: 600px;
@@ -267,9 +274,9 @@ $secondColor: #295b8a;
     .slider-container {
       margin-top: 7em;
       margin-right: 4em;
-      position: relative;
+      // position: relative;
       // height: 200px;
-      // width: 200px;
+      width: 200px;
       overflow: hidden;
       .image-slider {
         display: flex;
@@ -291,6 +298,7 @@ $secondColor: #295b8a;
         top: 65%;
         z-index: 2;
         margin-right: 2em;
+        left: 77%;
       }
       .fa-arrow-alt-circle-right {
         position: absolute;
@@ -303,7 +311,7 @@ $secondColor: #295b8a;
 }
 .products-section {
   height: 140vh;
-  // margin-top: 6em;
+  margin-top: 3em;
   margin-bottom: 2em;
   position: relative;
   .products-center {
@@ -345,11 +353,14 @@ $secondColor: #295b8a;
     .product-info {
       display: flex;
       align-items: center;
-      padding: 1em;
+      padding: 2em 6em;
       max-width: 980px;
       margin: 5em auto;
       transition: 0.5s ease-in;
       opacity: 0;
+      font-family: "poppins";
+      letter-spacing: 2px;
+      // background-color: #295b8a;
       img {
         width: 200px;
       }
@@ -379,7 +390,11 @@ $secondColor: #295b8a;
           margin-bottom: 2em;
           background-color: $mainColor;
           // width: 600px;
-
+          .cpu-title {
+            color: #295b8a;
+            font-size: 1em;
+            letter-spacing: 4px;
+          }
           .info {
             font-size: 4em;
             color: white;
@@ -390,8 +405,8 @@ $secondColor: #295b8a;
             top: 35%;
             opacity: 0;
             transition: 0.3s ease-in-out;
-            border: black 2px solid;
-            background: black;
+            // border: black 2px solid;
+            // background: black;
             // border-radius: 50px;
             // margin-top: 4em;
           }
@@ -414,8 +429,12 @@ $secondColor: #295b8a;
             top: 80%;
             transform: translateX(-100%);
             cursor: pointer;
-            transition: 0.5s ease-in-out;
+            transition: 0.3s ease-in-out;
           }
+        }
+        .cpu-btn:hover {
+          color: black;
+          background-color: white;
         }
         .cpu:hover .info {
           opacity: 1;
@@ -424,7 +443,7 @@ $secondColor: #295b8a;
           transform: translateX(0%);
         }
         .cpu:hover .cpu-container img {
-          opacity: 0.3;
+          opacity: 0.2;
         }
       }
       .product-gpu {
@@ -442,6 +461,11 @@ $secondColor: #295b8a;
           background-color: $mainColor;
           // width: 600px;
           // transition: 0.2s ease-in;
+          .gpu-title {
+            color: #295b8a;
+            font-size: 1em;
+            letter-spacing: 4px;
+          }
           .info {
             font-size: 4em;
             color: white;
@@ -452,8 +476,8 @@ $secondColor: #295b8a;
             top: 35%;
             opacity: 0;
             transition: 0.3s ease-in-out;
-            border: black 2px solid;
-            background: black;
+            // border: black 2px solid;
+            // background: black;
             // margin-top: 4em;
           }
           img {
@@ -475,8 +499,12 @@ $secondColor: #295b8a;
             top: 80%;
             transform: translateX(-100%);
             cursor: pointer;
-            transition: 0.5s ease-in-out;
+            transition: 0.3s ease-in-out;
           }
+        }
+        .gpu-btn:hover {
+          color: black;
+          background-color: white;
         }
         .gpu:hover .info {
           opacity: 1;
@@ -494,7 +522,8 @@ $secondColor: #295b8a;
 .game {
   width: 100%;
   height: 110vh;
-  background: url("/images/service-section.jpg") center no-repeat;
+  background: url("/images/game-background.png") center no-repeat;
+  // background-size: 100px;
   h2 {
     color: white;
     text-align: center;
@@ -528,7 +557,7 @@ $secondColor: #295b8a;
       font-size: 1.5em;
       border-radius: 20px;
       border: none;
-      background-color: rgb(0, 119, 255);
+      background-color: black;
       color: white;
       position: absolute;
       left: 25%;
@@ -546,7 +575,7 @@ $secondColor: #295b8a;
   }
 }
 footer {
-  background: $mainColor;
+  background: black;
   margin-top: -1em;
   height: 10vh;
   .footer-center {
@@ -577,7 +606,7 @@ footer {
   width: 1000px;
   height: 730px;
   z-index: 30;
-  background: url("images/com-background.png");
+  background: url("/images/com-background.png");
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
   top: 50%;
   left: 35%;
