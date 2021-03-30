@@ -37,6 +37,7 @@
         </div>
         <div class="components-container">
             <span class="components-logo">
+                <i class="fas fa-cog"></i>
                 <img src="images/components/com-logo.png" alt="">
             </span>
             <div class="components-info">
@@ -58,8 +59,8 @@
             </div>
         </div>
     </div>
-    <div class="build-overlay"></div>
-    <div class="components-model">
+    <div class="build-overlay hidden"></div>
+    <div class="components-model hidden">
         <div class="com-header">
             <!-- <i class="far fa-window-close close-model-com"></i> -->
             <h2>Recomended Components</h2>
@@ -83,41 +84,33 @@
             </div>
         </div>
     </div>
-    <!-- <div class="games-model">
-        <div class="games-header">
-            <h2>Selected Games</h2>
-        </div>
-        <div class="games-model-center">
-            <div class="games">
-                <img src="images/components.png" alt="">
-                <h2>Title <br><span class="com-price">FPS: </span></h2>
-            </div>
-            <div class="games">
-                <img src="images/components.png" alt="">
-                <h2>Title <br><span class="com-price">FPS: </span></h2>
-            </div>
-            <div class="games">
-                <img src="images/components.png" alt="">
-                <h2>Title <br><span class="com-price">FPS: </span></h2>
-            </div>
-            <div class="games">
-                <img src="images/components.png" alt="">
-                <h2>Title <br><span class="com-price">FPS: </span></h2>
-            </div>
-        </div>
-    </div> -->
     <section class="main-section">
         <nav class="nav-section"> 
-                <div class="nav-center">
-                    <a href="#" class="homeBtn"><h2>Components</h2></a>
-                    <ul>
-                        <a href="#" class="servicesBtn">Services</a>
-                        <a href="#" class="productsBtn">Products</a>
-                        <a href="#" class="gamesBtn">Games</a>
-                    </ul>
+            <div class="nav-center">
+                <div class="logo menu">
+                    <div>
+                        <a href="#" class="homeBtn"><h2>Components</h2></a>
+                    </div>
+                    <div>
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+                <ul class="nav-name">
+                    <a href="#" class="servicesBtn">Services</a>
+                    <a href="#" class="productsBtn">Products</a>
+                    <a href="#" class="gamesBtn">Games</a>
+                </ul>
+                <div>
                     <i class="fab fa-ethereum"></i>
                 </div>
-            </nav>
+            </div>
+            <div class="mobile-nav">
+                <a href="#" class="services mobile">Services</a>
+                <a href="#" class="products mobile">Products</a>
+                <a href="#" class="games mobile">Games</a>
+            </div>
+        </nav>
+        <div class="bg-nav"></div>
         <div class="hero-section">
             <div class="hero-text">
                 <h1><span>Building</span> <br>Made Simple</h1>
@@ -137,9 +130,9 @@
                 <p class="service-title">Services</p>
                 <p>Built to alievate the stress of choosing components when building pc's, let us guide your process by making it simple and stress free. Choose from brands such as...</p>
             </div> 
+            <i class="far fa-arrow-alt-circle-left" id="prev"></i>
+            <i class="far fa-arrow-alt-circle-right" id="next"></i>
             <div class="slider-container">
-                <i class="far fa-arrow-alt-circle-left" id="prev"></i>
-                <i class="far fa-arrow-alt-circle-right" id="next"></i>
                 <div class="image-slider">
                     <img src="images/intel.png" id="cloneStart" alt="">
                     <img src="images/ryzen.png" alt="">
@@ -193,46 +186,59 @@
             <article class="games">
                 <div class="game-container">
                     <img src="images/games/Apexlegends.png" alt="">
-                    <button class="average first" data-id="1">Average Fps</button>
+                    <button class="average first" data-id="1">Explore</button>
                 </div>
             </article>
             <article class="games">
                 <div class="game-container">
                     <img src="images/games/Csgo.png" alt="">
-                    <button class="average second" data-id="2">Average Fps</button>
+                    <button class="average second" data-id="2">Explore</button>
                 </div>
             </article>
             <article class="games">
                 <div class="game-container">
                     <img src="images/games/Cyberpunk.png" alt="">
-                    <button class="average third" data-id="3">Average Fps</button>
+                    <button class="average third" data-id="3">Explore</button>
                 </div>
             </article>
             <article class="games">
                 <div class="game-container">
                     <img src="images/games/Fortnite.png" alt="">
-                    <button class="average forth" data-id="4">Average Fps</button>
+                    <button class="average forth" data-id="4">Explore</button>
                 </div>
             </article>
             <article class="games">
                 <div class="game-container">
                     <img src="images/games/Rocketleage.png" alt="">
-                    <button class="average fifth" data-id="5">Average Fps</button>
+                    <button class="average fifth" data-id="5">Explore</button>
                 </div>
             </article>
             <article class="games">
                 <div class="game-container">
                     <img src="images/games/The-Witcher.png" alt="">
-                    <button class="average sixth" data-id="6">Average Fps</button>
+                    <button class="average sixth" data-id="6">Explore</button>
                 </div>
             </article>
+            <hr>
         </div>
     </section>
+    <div class="game-page hidden animtion-s">
+        <div class="game-info-center">
+            <div class="top">
+                <i class="fas fa-times"></i>
+                <h2 class="game-name">Name</h2>
+            </div>
+            <img src="./images/games/Apexlegends.png" alt="">
+            <button class="game-path">pathname</button>
+            <h2 class="game-averages">Average Fps:</h2>
+            <P class="game-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, cupiditate. Officiis omnis sed eos repellat, quas, perspiciatis temporibus, odio ipsum est adipisci ipsam. Consectetur deserunt atque suscipit qui possimus voluptate amet alias, iusto facilis voluptas! Magni voluptate repellat amet quidem.</P>
+        </div>
+    </div>
     <footer>
         <div class="footer-center">
             <h2>Components</h2>
             <div class="social">
-                <i class="fab fa-linkedin"></i>
+               <a href="https://www.linkedin.com/in/joseph-adeyanju-669942200/"> <i class="fab fa-linkedin"></i></a>
                 <i class="fab fa-twitter-square"></i>
                 <i class="fab fa-facebook-square"></i>
 

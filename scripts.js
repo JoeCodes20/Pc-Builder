@@ -44,31 +44,31 @@ const slider = document.querySelector(".image-slider");
 const images = document.querySelectorAll(".image-slider img");
 
 let counter = 1;
-slider.style.transform = "translateX(" + -200 * counter + "px)";
+slider.style.transform = "translateX(" + -350 * counter + "px)";
 
 serviceNextBtn.addEventListener("click", () => {
   if (counter >= images.length - 1) return;
   slider.style.transition = "transform .5s ease-in-out";
   counter++;
-  slider.style.transform = "translateX(" + -200 * counter + "px)";
+  slider.style.transform = "translateX(" + -320 * counter + "px)";
 });
 servicePrevBtn.addEventListener("click", () => {
   if (counter <= 0) return;
   slider.style.transition = "transform .5s ease-in-out";
   counter--;
-  slider.style.transform = "translateX(" + -200 * counter + "px)";
+  slider.style.transform = "translateX(" + -320 * counter + "px)";
 });
 
 slider.addEventListener("transitionend", () => {
   if (images[counter].id === "cloneStart") {
     slider.style.transition = "none";
     counter = images.length - 2;
-    slider.style.transform = "translateX(" + -200 * counter + "px)";
+    slider.style.transform = "translateX(" + -350 * counter + "px)";
   }
   if (images[counter].id === "cloneEnd") {
     slider.style.transition = "none";
     counter = images.length - counter;
-    slider.style.transform = "translateX(" + -200 * counter + "px)";
+    slider.style.transform = "translateX(" + -350 * counter + "px)";
   }
 });
 
@@ -83,7 +83,7 @@ const buildTitle = document.querySelector(".title");
 const buildCenter = document.querySelector(".build");
 const buildOverlay = document.querySelector(".build-overlay");
 const buildIcon = document.querySelector(".fa-ethereum");
-const closeBuild = document.querySelector(".closeBuild");
+const closeBtn = document.querySelector(".closeBuild");
 const buildDom = document.querySelector(".products-container");
 const clearBuild = document.querySelector(".clear-build");
 const comLogo = document.querySelector(".components-logo");
@@ -121,7 +121,8 @@ class ProductBtn {
           Storage.title(buildTitle.innerHTML);
         })
         .catch((err) => console.log(err));
-      //   location.reload();
+      findGame();
+      // location.reload();
     });
     performanceBtn.addEventListener("click", () => {
       fetch("products.json")
@@ -141,7 +142,8 @@ class ProductBtn {
           Storage.info(productInfo.innerHTML);
           Storage.title(buildTitle.innerHTML);
         });
-      //   location.reload();
+      findGame();
+      // location.reload();
     });
     enthusiastBtn.addEventListener("click", () => {
       fetch("products.json")
@@ -160,7 +162,8 @@ class ProductBtn {
           Storage.title(buildTitle.innerHTML);
         })
         .catch((err) => console.log(err));
-      //   location.reload();
+      // location.reload();
+      findGame();
     });
   }
 }
@@ -172,7 +175,9 @@ class UI {
     productInfo.style.opacity = 1;
   }
   static displayPath() {
+    if (localStorage.getItem("path") === null) return;
     let item = JSON.parse(localStorage.getItem("path"));
+    // console.log(item);
     const cpu = item[0];
     const gpu = item[1];
     productCpu.innerHTML = `
@@ -198,20 +203,22 @@ class UI {
   }
   static displayBuild() {
     buildIcon.addEventListener("click", UI.openBuild);
-    closeBuild.addEventListener("click", UI.closeBuild);
+    closeBtn.addEventListener("click", UI.closeBuild);
   }
   static openBuild() {
     buildCenter.classList.add("showBuild");
-    buildOverlay.classList.add("showOverlay");
+    buildOverlay.classList.remove("hidden");
   }
   static closeBuild() {
     buildCenter.classList.remove("showBuild");
-    buildOverlay.classList.remove("showOverlay");
+    buildOverlay.classList.add("hidden");
   }
   static buildDom() {
     const item = JSON.parse(localStorage.getItem("path"));
     const cpuBtn = document.querySelector(".cpu-btn");
     const gpuBtn = document.querySelector(".gpu-btn");
+    // console.log(cpuBtn);
+    if (item === null) return;
     if (cart < 2) {
       cpuBtn.addEventListener("click", () => {
         const cpu = item[0];
@@ -266,12 +273,12 @@ class UI {
   }
   static comUI() {
     comLogo.addEventListener("click", () => {
-      comModel.classList.toggle("showCom");
-      gameModel.classList.remove("showGame");
+      comModel.classList.toggle("hidden");
     });
   }
-  static comInfo() {
+  static comInfo(avg) {
     let item = JSON.parse(localStorage.getItem("path"));
+    if (item === null) return;
     item = item.map((item) => item.id);
     const val = parseFloat(item);
     if (val === 1) {
@@ -294,12 +301,6 @@ class UI {
             </div>`;
       comPrice.innerText = `449.96`;
       buildTotal.innerHTML = `449.96`;
-      apexlegends.innerHTML = "Average Fps <br> 81";
-      csgo.innerHTML = "Average Fps <br> 220";
-      cyberpunk.innerHTML = "Average Fps <br> 43";
-      fortnite.innerHTML = "Average Fps <br> 192";
-      rocketleage.innerHTML = "Average Fps <br> 180";
-      theWitcher.innerHTML = "Average Fps <br> 76";
     } else if (val === 3) {
       comCenter.innerHTML = `
             <div class="com">
@@ -320,12 +321,6 @@ class UI {
             </div>`;
       comPrice.innerText = `449.96`;
       buildTotal.innerHTML = `449.96`;
-      apexlegends.innerHTML = "Average Fps <br> 138";
-      csgo.innerHTML = "Average Fps <br> 260";
-      cyberpunk.innerHTML = "Average Fps <br> 68";
-      fortnite.innerHTML = "Average Fps <br> 250";
-      rocketleage.innerHTML = "Average Fps <br> 238";
-      theWitcher.innerHTML = "Average Fps <br> 98";
     } else if (val === 5) {
       comCenter.innerHTML = `
             <div class="com">
@@ -346,12 +341,6 @@ class UI {
             </div>`;
       comPrice.innerText = `709.99`;
       buildTotal.innerHTML = `709.99`;
-      apexlegends.innerHTML = "Average Fps <br> 264";
-      csgo.innerHTML = "Average Fps <br> 681";
-      cyberpunk.innerHTML = "Average Fps <br> 145";
-      fortnite.innerHTML = "Average Fps <br> 360";
-      rocketleage.innerHTML = "Average Fps <br> 908";
-      theWitcher.innerHTML = "Average Fps <br> 178";
     }
   }
 }
@@ -372,15 +361,402 @@ class Storage {
   }
 }
 
-const path = new ProductBtn();
-const ui = new UI();
-ui.uiInfo();
-path.getPathBtn();
-UI.displayPath();
-UI.displayBuild();
-UI.buildDom();
-UI.buildLogic();
-UI.comUI();
-UI.comInfo();
-// location.reload();
-console.log(cart);
+document.addEventListener("DOMContentLoaded", () => {
+  const path = new ProductBtn();
+  const ui = new UI();
+  ui.uiInfo();
+  path.getPathBtn();
+  UI.displayPath();
+  UI.displayBuild();
+  UI.buildDom();
+  UI.buildLogic();
+  UI.comUI();
+  UI.comInfo();
+});
+
+const gameExplore = document.querySelectorAll(".average");
+const gamePage = document.querySelector(".game-page");
+const averages = document.querySelector(".game-averages");
+const gamePath = document.querySelector(".game-path");
+
+function findGame() {
+  let item = localStorage.getItem("path");
+  [...gameExplore].forEach((btn) => {
+    if (item) {
+      btn.addEventListener("click", (e) => {
+        let button = e.target;
+        if (button.classList.contains("first")) {
+          let path = JSON.parse(localStorage.getItem("path"));
+          let [select, sub] = path;
+          if (select.id === 1) {
+            gamePage.innerHTML = `
+          <div class="game-info-center">
+            <div class="top">
+                <i class="fas fa-times"></i>
+                <h2 class="game-name">Apex Legends</h2>
+            </div>
+            <img src="./images/games/Apexlegends.png" alt="">
+            <button class="game-path">pathname</button>
+            <h2 class="game-averages">Average Fps: 81</h2>
+            <P class="game-info">Apex Legends is a free-to-play battle royale game developed by Respawn Entertainment and published by Electronic Arts. ... In Apex Legends, up to 20 three-person squads or 30 two-person duos land on an island and search for weapons and supplies before attempting to defeat all other players in combat.</P>
+          </div>
+          `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Budget";
+          }
+          if (select.id === 3) {
+            gamePage.innerHTML = `
+        <div class="game-info-center">
+          <div class="top">
+              <i class="fas fa-times"></i>
+              <h2 class="game-name">Apex Legends</h2>
+          </div>
+          <img src="./images/games/Apexlegends.png" alt="">
+          <button class="game-path">pathname</button>
+          <h2 class="game-averages">Average Fps: 138</h2>
+          <P class="game-info">Apex Legends is a free-to-play battle royale game developed by Respawn Entertainment and published by Electronic Arts. ... In Apex Legends, up to 20 three-person squads or 30 two-person duos land on an island and search for weapons and supplies before attempting to defeat all other players in combat.</P>
+        </div>
+        `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Performance";
+          }
+          if (select.id === 5) {
+            gamePage.innerHTML = `
+        <div class="game-info-center">
+          <div class="top">
+              <i class="fas fa-times"></i>
+              <h2 class="game-name">Apex Legends</h2>
+          </div>
+          <img src="./images/games/Apexlegends.png" alt="">
+          <button class="game-path">pathname</button>
+          <h2 class="game-averages">Average Fps: 264</h2>
+          <P class="game-info">Apex Legends is a free-to-play battle royale game developed by Respawn Entertainment and published by Electronic Arts. ... In Apex Legends, up to 20 three-person squads or 30 two-person duos land on an island and search for weapons and supplies before attempting to defeat all other players in combat.</P>
+        </div>
+        `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Enthusiast";
+          }
+          explore();
+        }
+        if (button.classList.contains("second")) {
+          let path = JSON.parse(localStorage.getItem("path"));
+          let [select, sub] = path;
+          if (select.id === 1) {
+            gamePage.innerHTML = `
+        <div class="game-info-center">
+          <div class="top">
+              <i class="fas fa-times"></i>
+              <h2 class="game-name">C.S.G.O</h2>
+          </div>
+          <img src="./images/games/Csgo.png" alt="">
+          <button class="game-path">pathname</button>
+          <h2 class="game-averages">Average Fps: 220</h2>
+          <P class="game-info">Counter-Strike: Global Offensive (CS:GO) expands upon the team-based first person shooter gameplay the original Counter-Strike pioneered when it launched in 1999. Two teams compete in multiple rounds of objective-based game modes with the goal of winning enough rounds to win the match.</P>
+        </div>
+        `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Budget";
+          }
+          if (select.id === 3) {
+            gamePage.innerHTML = `
+          <div class="game-info-center">
+            <div class="top">
+                <i class="fas fa-times"></i>
+                <h2 class="game-name">C.S.G.O</h2>
+            </div>
+            <img src="./images/games/Csgo.png" alt="">
+            <button class="game-path">pathname</button>
+            <h2 class="game-averages">Average Fps: 220</h2>
+            <P class="game-info">Counter-Strike: Global Offensive (CS:GO) expands upon the team-based first person shooter gameplay the original Counter-Strike pioneered when it launched in 1999. Two teams compete in multiple rounds of objective-based game modes with the goal of winning enough rounds to win the match.</P>
+          </div>
+          `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Performance";
+          }
+          if (select.id === 5) {
+            gamePage.innerHTML = `
+          <div class="game-info-center">
+            <div class="top">
+                <i class="fas fa-times"></i>
+                <h2 class="game-name">C.S.G.O</h2>
+            </div>
+            <img src="./images/games/Csgo.png" alt="">
+            <button class="game-path">pathname</button>
+            <h2 class="game-averages">Average Fps: 681</h2>
+            <P class="game-info">Counter-Strike: Global Offensive (CS:GO) expands upon the team-based first person shooter gameplay the original Counter-Strike pioneered when it launched in 1999. Two teams compete in multiple rounds of objective-based game modes with the goal of winning enough rounds to win the match.</P>
+          </div>
+          `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Enthusiast";
+          }
+          explore();
+        }
+        if (button.classList.contains("third")) {
+          let path = JSON.parse(localStorage.getItem("path"));
+          let [select, sub] = path;
+          if (select.id === 1) {
+            gamePage.innerHTML = `
+        <div class="game-info-center">
+          <div class="top">
+              <i class="fas fa-times"></i>
+              <h2 class="game-name">Cyberpunk</h2>
+          </div>
+          <img src="./images/games/Cyberpunk.png" alt="">
+          <button class="game-path">pathname</button>
+          <h2 class="game-averages">Average Fps: 43</h2>
+          <P class="game-info">Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. ... You can customize your character's cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.</P>
+          </div>
+          `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Budget";
+          }
+          if (select.id === 3) {
+            gamePage.innerHTML = `
+        <div class="game-info-center">
+          <div class="top">
+              <i class="fas fa-times"></i>
+              <h2 class="game-name">Cyberpunk</h2>
+          </div>
+          <img src="./images/games/Cyberpunk.png" alt="">
+          <button class="game-path">pathname</button>
+          <h2 class="game-averages">Average Fps: 68</h2>
+          <P class="game-info">Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. ... You can customize your character's cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.</P>
+        </div>
+        `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Performance";
+          }
+          if (select.id === 5) {
+            gamePage.innerHTML = `
+        <div class="game-info-center">
+          <div class="top">
+              <i class="fas fa-times"></i>
+              <h2 class="game-name">Cyberpunk</h2>
+          </div>
+          <img src="./images/games/Cyberpunk.png" alt="">
+          <button class="game-path">pathname</button>
+          <h2 class="game-averages">Average Fps: 145</h2>
+          <P class="game-info">Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. ... You can customize your character's cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.</P>
+        </div>
+        `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Enthusiast";
+          }
+          explore();
+        }
+        if (button.classList.contains("forth")) {
+          let path = JSON.parse(localStorage.getItem("path"));
+          let [select, sub] = path;
+          if (select.id === 1) {
+            gamePage.innerHTML = `
+        <div class="game-info-center">
+          <div class="top">
+              <i class="fas fa-times"></i>
+              <h2 class="game-name">Fortnite</h2>
+          </div>
+          <img src="images/games/Fortnite.png" alt="">
+          <button class="game-path">pathname</button>
+          <h2 class="game-averages">Average Fps: 192</h2>
+          <P class="game-info">Fortnite is a survival game where 100 players fight against each other in player versus player combat to be the last one standing. It is a fast-paced, action-packed game, not unlike The Hunger Games, where strategic thinking is a must in order to survive.</P>
+          </div>
+          `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Budget";
+          }
+          if (select.id === 3) {
+            gamePage.innerHTML = `
+        <div class="game-info-center">
+          <div class="top">
+              <i class="fas fa-times"></i>
+              <h2 class="game-name">Fortnite</h2>
+          </div>
+          <img src="images/games/Fortnite.png" alt="">
+          <button class="game-path">pathname</button>
+          <h2 class="game-averages">Average Fps: 250</h2>
+          <P class="game-info">Fortnite is a survival game where 100 players fight against each other in player versus player combat to be the last one standing. It is a fast-paced, action-packed game, not unlike The Hunger Games, where strategic thinking is a must in order to survive.</P>
+        </div>
+        `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Performance";
+          }
+          if (select.id === 5) {
+            gamePage.innerHTML = `
+        <div class="game-info-center">
+          <div class="top">
+              <i class="fas fa-times"></i>
+              <h2 class="game-name">Fortnite</h2>
+          </div>
+          <img src="images/games/Fortnite.png" alt="">
+          <button class="game-path">pathname</button>
+          <h2 class="game-averages">Average Fps: 360</h2>
+          <P class="game-info">Fortnite is a survival game where 100 players fight against each other in player versus player combat to be the last one standing. It is a fast-paced, action-packed game, not unlike The Hunger Games, where strategic thinking is a must in order to survive.</P>
+        </div>
+        `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Enthusiast";
+          }
+          explore();
+        }
+        if (button.classList.contains("fifth")) {
+          let path = JSON.parse(localStorage.getItem("path"));
+          let [select, sub] = path;
+          if (select.id === 1) {
+            gamePage.innerHTML = `
+          <div class="game-info-center">
+            <div class="top">
+                <i class="fas fa-times"></i>
+                <h2 class="game-name">Rocketleage</h2>
+            </div>
+            <img src="images/games/Rocketleage.png" alt="">
+            <button class="game-path">pathname</button>
+            <h2 class="game-averages">Average Fps: 180</h2>
+            <P class="game-info">Rocket League is a vehicular soccer video game developed and published by Psyonix. Described as "soccer, but with rocket-powered cars," Rocket League involves two teams that use rocket-powered vehicles to hit a ball into their opponent's goal and score points over the course of a match.</P>
+          </div>
+          `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Budget";
+          }
+          if (select.id === 3) {
+            gamePage.innerHTML = `
+        <div class="game-info-center">
+          <div class="top">
+              <i class="fas fa-times"></i>
+              <h2 class="game-name">Rocketleage</h2>
+          </div>
+          <img src="images/games/Rocketleage.png" alt="">
+          <button class="game-path">pathname</button>
+          <h2 class="game-averages">Average Fps: 238</h2>
+          <P class="game-info">Rocket League is a vehicular soccer video game developed and published by Psyonix. Described as "soccer, but with rocket-powered cars," Rocket League involves two teams that use rocket-powered vehicles to hit a ball into their opponent's goal and score points over the course of a match.</P>
+        </div>
+        `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Performance";
+          }
+          if (select.id === 5) {
+            gamePage.innerHTML = `
+        <div class="game-info-center">
+          <div class="top">
+              <i class="fas fa-times"></i>
+              <h2 class="game-name">Rocketleage</h2>
+          </div>
+          <img src="images/games/Rocketleage.png" alt="">
+          <button class="game-path">pathname</button>
+          <h2 class="game-averages">Average Fps: 908</h2>
+          <P class="game-info">Rocket League is a vehicular soccer video game developed and published by Psyonix. Described as "soccer, but with rocket-powered cars," Rocket League involves two teams that use rocket-powered vehicles to hit a ball into their opponent's goal and score points over the course of a match.</P>
+        </div>
+        `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Enthusiast";
+          }
+          explore();
+        }
+        if (button.classList.contains("sixth")) {
+          let path = JSON.parse(localStorage.getItem("path"));
+          let [select, sub] = path;
+          if (select.id === 1) {
+            gamePage.innerHTML = `
+        <div class="game-info-center">
+          <div class="top">
+              <i class="fas fa-times"></i>
+              <h2 class="game-name">The Witcher</h2>
+          </div>
+          <img src="images/games/The-Witcher.png" alt="">
+          <button class="game-path">pathname</button>
+          <h2 class="game-averages">Average Fps: 76</h2>
+          <P class="game-info">The Witcher 3: Wild Hunt is an action role-playing game with a third-person perspective. Players control Geralt of Rivia, a monster slayer known as a Witcher. Geralt walks, runs, rolls and dodges, and (for the first time in the series) jumps, climbs and swims.</P>
+        </div>
+        `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Budget";
+          }
+          if (select.id === 3) {
+            gamePage.innerHTML = `
+        <div class="game-info-center">
+          <div class="top">
+              <i class="fas fa-times"></i>
+              <h2 class="game-name">The Witcher</h2>
+          </div>
+          <img src="images/games/The-Witcher.png" alt="">
+          <button class="game-path">pathname</button>
+          <h2 class="game-averages">Average Fps: 98</h2>
+          <P class="game-info">The Witcher 3: Wild Hunt is an action role-playing game with a third-person perspective. Players control Geralt of Rivia, a monster slayer known as a Witcher. Geralt walks, runs, rolls and dodges, and (for the first time in the series) jumps, climbs and swims.</P>
+        </div>
+        `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Performance";
+          }
+          if (select.id === 5) {
+            gamePage.innerHTML = `
+        <div class="game-info-center">
+          <div class="top">
+              <i class="fas fa-times"></i>
+              <h2 class="game-name">The Witcher</h2>
+          </div>
+          <img src="images/games/The-Witcher.png" alt="">
+          <button class="game-path">pathname</button>
+          <h2 class="game-averages">Average Fps: 178</h2>
+          <P class="game-info">The Witcher 3: Wild Hunt is an action role-playing game with a third-person perspective. Players control Geralt of Rivia, a monster slayer known as a Witcher. Geralt walks, runs, rolls and dodges, and (for the first time in the series) jumps, climbs and swims.</P>
+        </div>
+        `;
+            document.querySelector(".game-info-center").children[2].innerText =
+              "Enthusiast";
+          }
+          explore();
+        }
+      });
+    }
+    if (item === null) return;
+  });
+}
+findGame();
+
+function explore() {
+  gamePage.classList.remove("hidden");
+  gamePage.classList.remove("animtion-s");
+  gamePage.classList.add("animation-e");
+  buildOverlay.classList.remove("hidden");
+  const close = document.querySelector(".fa-times");
+  close.addEventListener("click", () => {
+    gamePage.classList.add("hidden");
+    buildOverlay.classList.add("hidden");
+  });
+}
+
+function comModelClose() {
+  let model = document.querySelector(".components-model");
+  model.addEventListener("click", (e) => {
+    document.querySelector(".components-model").classList.add("hidden");
+  });
+}
+comModelClose();
+function menu() {
+  function openNav() {
+    document.querySelector(".fa-bars").addEventListener("click", () => {
+      document.querySelector(".mobile-nav").classList.toggle("active");
+    });
+  }
+  openNav();
+  const nav = document.querySelectorAll(".mobile");
+  [...nav].forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      let button = e.target;
+      if (button.classList.contains("services")) {
+        e.preventDefault();
+        serviceSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest",
+        });
+      }
+      if (button.classList.contains("products")) {
+        e.preventDefault();
+        productsSection.scrollIntoView({ behavior: "smooth" });
+      }
+      if (button.classList.contains("games")) {
+        e.preventDefault();
+        gameSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+}
+menu();
