@@ -2224,6 +2224,457 @@ footer {
     margin: 0 1em;
   }
 }
+@media screen and (min-width: 350px) and (max-width: 699px) {
+  .service {
+    height: 800px;
+    position: relative;
+    background: url(/images/service-section.jpg) center no-repeat;
+    background-attachment: fixed;
+    // margin-bottom: 2em;
+    .service-content {
+      max-width: 1408px;
+      margin: 0 auto;
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+      position: relative;
+      .service-title {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        letter-spacing: 6px;
+        color: #295b8a;
+      }
+      .service-text {
+        color: white;
+        max-width: 600px;
+        font-size: 1.7em;
+        letter-spacing: 1.5px;
+        margin-top: 5em;
+        margin-left: 1em;
+        text-align: center;
+        font-family: "poppins";
+      }
+      .slider-container {
+        position: absolute;
+        top: 440px;
+        left: 15%;
+        padding: 3em;
+        margin-top: 0em;
+        margin-right: 4em;
+        // position: relative;
+        // height: 200px;
+        width: 300px;
+        overflow: hidden;
+        .image-slider {
+          display: flex;
+          height: 300px;
+          width: 300px;
+          // transition: 0.5s ease-in-out;
+          img {
+            border-radius: 500px;
+            width: 300px;
+            height: 100%;
+          }
+        }
+        i {
+          color: white;
+          font-size: 2em;
+          cursor: pointer;
+        }
+      }
+    }
+    .fa-arrow-alt-circle-left {
+      position: absolute;
+      top: 450px;
+      z-index: 2;
+      font-size: 100px;
+      color: white;
+      left: 20%;
+    }
+    .fa-arrow-alt-circle-right {
+      position: absolute;
+      top: 700px;
+      z-index: 2;
+      font-size: 100px;
+      color: white;
+      left: 50%;
+    }
+  }
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1408px;
+    margin: 0 auto;
+    // margin-top: 12em;
+    padding: 0 2em;
+    .hero-text {
+      color: white;
+      position: absolute;
+      top: 300px;
+      z-index: 8;
+      left: 150px;
+      text-shadow: 5px 10px 8px black;
+      h1 {
+        font-family: "poppins";
+        font-size: 4em;
+        letter-spacing: 2px;
+        line-height: 80px;
+      }
+      p {
+        max-width: 25em;
+        margin-top: 20px;
+        letter-spacing: 0.5px;
+        font-size: 1.3em;
+      }
+      span {
+        font-size: 1.6em;
+      }
+    }
+    .hero-img {
+      img {
+        position: absolute;
+        top: 350px;
+        width: 800px;
+        height: auto;
+        right: 10%;
+        box-shadow: 10px 10px 10px black;
+      }
+    }
+  }
+  .build {
+    width: 30vw;
+    min-width: 450px;
+    .components-container {
+      display: flex;
+      align-items: center;
+      margin: 2em 5em;
+      .components-logo {
+        position: relative;
+        i {
+          position: absolute;
+          color: white;
+          z-index: 101;
+          font-size: 8em;
+          top: 60px;
+          left: -20px;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+        img {
+          margin-left: -5em;
+          width: 250px;
+          height: 250px;
+          // margin-right: 1em;
+        }
+      }
+      .components-info {
+        text-align: center;
+        letter-spacing: 2px;
+      }
+    }
+  }
+  .products-section {
+    height: 1900px;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    position: relative;
+    .products-center {
+      max-width: 708px;
+      margin: 0 auto;
+      .product-title {
+        text-align: left;
+        font-family: "poppins";
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        text-transform: uppercase;
+        color: #295b8a;
+        z-index: 8;
+      }
+      .product-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em;
+        .button {
+          padding: 1em 2em;
+          margin: 0 2em;
+          cursor: pointer;
+          border-radius: 10px;
+          border: none;
+          font-family: "poppins";
+          font-size: 15px;
+          transition: 0.2s;
+        }
+        .btn1 {
+          background: $mainColor;
+          color: white;
+        }
+        .btn2 {
+          background: $secondColor;
+          color: white;
+        }
+        .btn3 {
+          background: $mainColor;
+          color: white;
+        }
+      }
+      .product-info {
+        display: flex;
+        align-items: center;
+        padding: 2em 6em;
+        max-width: 9680px;
+        margin: 5em auto;
+        transition: 0.2s ease-in;
+        opacity: 0;
+        font-family: "poppins";
+        letter-spacing: 2px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 40px black;
+        // background-color: #295b8a;
+        img {
+          width: 200px;
+        }
+        p {
+          text-align: center;
+          margin-left: 30px;
+          font-size: 11px;
+        }
+      }
+      .products {
+        margin-top: 3em;
+        padding: 0 1em;
+        margin-left: 200px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-column-gap: 1.5em;
+        transition: 0.8s ease-in;
+        .product-cpu {
+          width: 400px;
+          .cpu-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 1em;
+            font-family: "Satisfy";
+          }
+          .cpu-container {
+            position: relative;
+            overflow: hidden;
+            // max-width: 500px;
+            margin-bottom: 2em;
+            background-color: $mainColor;
+            width: 400px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            .cpu-title {
+              color: #295b8a;
+              font-size: 0.7em;
+              width: 400px;
+              letter-spacing: 4px;
+            }
+            .info {
+              font-size: 3em;
+              color: white;
+              letter-spacing: 2px;
+              text-align: center;
+              position: absolute;
+              width: 400px;
+              top: 35%;
+              opacity: 0;
+              transition: 0.3s ease-in-out;
+            }
+            img {
+              width: 400px;
+              height: auto;
+            }
+            .cpu-btn {
+              word-spacing: 2px;
+              padding: 0.7em 2em;
+              letter-spacing: 2px;
+              border: none;
+              background: $mainColor;
+              color: white;
+              border-radius: 10px;
+              min-width: 200px;
+              display: flex;
+              justify-content: space-between;
+              position: absolute;
+              top: 80%;
+              transform: translateX(-100%);
+              cursor: pointer;
+              transition: 0.3s ease-in-out;
+            }
+          }
+          .cpu-btn:hover {
+            color: black;
+            background-color: white;
+          }
+          .cpu:hover .info {
+            opacity: 1;
+          }
+          .cpu:hover .cpu-btn {
+            transform: translateX(0%);
+          }
+          .cpu:hover .cpu-container img {
+            opacity: 0.2;
+          }
+        }
+        .product-gpu {
+          width: 400px;
+          .gpu-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 1em;
+            font-family: "Satisfy";
+          }
+          .gpu-container {
+            position: relative;
+            overflow: hidden;
+            // max-width: 500px;
+            margin-bottom: 2em;
+            background-color: $mainColor;
+            width: 400px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            // transition: 0.2s ease-in;
+            .gpu-title {
+              color: #295b8a;
+              font-size: 0.7em;
+              letter-spacing: 4px;
+              font-family: "Satisfy";
+              // text-align: center;
+              margin-left: 10px;
+              width: 400px;
+            }
+            .info {
+              font-size: 4em;
+              color: white;
+              letter-spacing: 2px;
+              text-align: center;
+              position: absolute;
+              width: 100%;
+              top: 35%;
+              opacity: 0;
+              transition: 0.3s ease-in-out;
+              // border: black 2px solid;
+              // background: black;
+              // margin-top: 4em;
+            }
+            img {
+              width: 400px;
+              height: auto;
+            }
+            .gpu-btn {
+              word-spacing: 2px;
+              padding: 0.7em 2em;
+              letter-spacing: 2px;
+              border: none;
+              background: $mainColor;
+              color: white;
+              border-radius: 10px;
+              min-width: 200px;
+              display: flex;
+              justify-content: space-between;
+              position: absolute;
+              top: 80%;
+              transform: translateX(-100%);
+              cursor: pointer;
+              transition: 0.3s ease-in-out;
+            }
+          }
+          .gpu-btn:hover {
+            color: black;
+            background-color: white;
+          }
+          .gpu:hover .info {
+            opacity: 1;
+          }
+          .gpu:hover .gpu-btn {
+            transform: translateX(0%);
+          }
+          .gpu:hover .gpu-container img {
+            opacity: 0.3;
+          }
+        }
+      }
+      .product-info:hover {
+        transform: scale(1.1);
+      }
+      .button:hover button {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .game {
+    width: calc(100%);
+    height: calc(100% + 70px);
+    margin-bottom: 90px;
+    background: url("/images/com-background.png");
+    h2 {
+      color: #295b8a;
+      text-align: left;
+      padding: 3em;
+      margin-left: -2%;
+      font-family: "poppins";
+      letter-spacing: 2px;
+      word-spacing: 2px;
+      margin-top: 2em;
+      font-size: 2em;
+    }
+    .game-center {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 0em;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-column-gap: 10px;
+      grid-row-gap: 20px;
+      .game-container {
+        width: 350px;
+        margin-left: 60px;
+        position: relative;
+        transition: 0.3s;
+      }
+      img {
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        width: 100%;
+        transition: 0.3s ease-in;
+        box-shadow: 20px 20px 20px black;
+      }
+      .average {
+        padding: 0.5em 1em;
+        min-width: 200px;
+        max-width: 300px;
+        font-size: 1.5em;
+        border-radius: 20px;
+        border: none;
+        background-color: black;
+        color: white;
+        position: absolute;
+        left: 25%;
+        top: 45%;
+        transition: 0.2s ease-in;
+        opacity: 0;
+        cursor: pointer;
+        outline: none;
+      }
+      .games:hover .average {
+        opacity: 1;
+      }
+      .games button:hover {
+        transform: scale(1.2);
+        color: black;
+        background-color: white;
+      }
+      .games:hover .game-container {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
 footer .footer-center .social i {
   color: white;
 }

@@ -2589,6 +2589,502 @@ footer .footer-center .social i {
   }
 }
 
+@media screen and (min-width: 350px) and (max-width: 699px) {
+  .service {
+    height: 800px;
+    position: relative;
+    background: url(/images/service-section.jpg) center no-repeat;
+    background-attachment: fixed;
+  }
+  .service .service-content {
+    max-width: 1408px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+  }
+  .service .service-content .service-title {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    letter-spacing: 6px;
+    color: #295b8a;
+  }
+  .service .service-content .service-text {
+    color: white;
+    max-width: 600px;
+    font-size: 1.7em;
+    letter-spacing: 1.5px;
+    margin-top: 5em;
+    margin-left: 1em;
+    text-align: center;
+    font-family: "poppins";
+  }
+  .service .service-content .slider-container {
+    position: absolute;
+    top: 440px;
+    left: 15%;
+    padding: 3em;
+    margin-top: 0em;
+    margin-right: 4em;
+    width: 300px;
+    overflow: hidden;
+  }
+  .service .service-content .slider-container .image-slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 300px;
+    width: 300px;
+  }
+  .service .service-content .slider-container .image-slider img {
+    border-radius: 500px;
+    width: 300px;
+    height: 100%;
+  }
+  .service .service-content .slider-container i {
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  .service .fa-arrow-alt-circle-left {
+    position: absolute;
+    top: 450px;
+    z-index: 2;
+    font-size: 100px;
+    color: white;
+    left: 20%;
+  }
+  .service .fa-arrow-alt-circle-right {
+    position: absolute;
+    top: 700px;
+    z-index: 2;
+    font-size: 100px;
+    color: white;
+    left: 50%;
+  }
+  .hero-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 1408px;
+    margin: 0 auto;
+    padding: 0 2em;
+  }
+  .hero-section .hero-text {
+    color: white;
+    position: absolute;
+    top: 300px;
+    z-index: 8;
+    left: 150px;
+    text-shadow: 5px 10px 8px black;
+  }
+  .hero-section .hero-text h1 {
+    font-family: "poppins";
+    font-size: 4em;
+    letter-spacing: 2px;
+    line-height: 80px;
+  }
+  .hero-section .hero-text p {
+    max-width: 25em;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+    font-size: 1.3em;
+  }
+  .hero-section .hero-text span {
+    font-size: 1.6em;
+  }
+  .hero-section .hero-img img {
+    position: absolute;
+    top: 350px;
+    width: 800px;
+    height: auto;
+    right: 10%;
+    -webkit-box-shadow: 10px 10px 10px black;
+            box-shadow: 10px 10px 10px black;
+  }
+  .build {
+    width: 30vw;
+    min-width: 450px;
+  }
+  .build .components-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 2em 5em;
+  }
+  .build .components-container .components-logo {
+    position: relative;
+  }
+  .build .components-container .components-logo i {
+    position: absolute;
+    color: white;
+    z-index: 101;
+    font-size: 8em;
+    top: 60px;
+    left: -20px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .build .components-container .components-logo img {
+    margin-left: -5em;
+    width: 250px;
+    height: 250px;
+  }
+  .build .components-container .components-info {
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  .products-section {
+    height: 1900px;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    position: relative;
+  }
+  .products-section .products-center {
+    max-width: 708px;
+    margin: 0 auto;
+  }
+  .products-section .products-center .product-title {
+    text-align: left;
+    font-family: "poppins";
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-transform: uppercase;
+    color: #295b8a;
+    z-index: 8;
+  }
+  .products-section .products-center .product-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 2em;
+  }
+  .products-section .products-center .product-buttons .button {
+    padding: 1em 2em;
+    margin: 0 2em;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    font-family: "poppins";
+    font-size: 15px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .products-section .products-center .product-buttons .btn1 {
+    background: #2b2b2b;
+    color: white;
+  }
+  .products-section .products-center .product-buttons .btn2 {
+    background: #295b8a;
+    color: white;
+  }
+  .products-section .products-center .product-buttons .btn3 {
+    background: #2b2b2b;
+    color: white;
+  }
+  .products-section .products-center .product-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2em 6em;
+    max-width: 9680px;
+    margin: 5em auto;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    opacity: 0;
+    font-family: "poppins";
+    letter-spacing: 2px;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 40px black;
+            box-shadow: 10px 10px 40px black;
+  }
+  .products-section .products-center .product-info img {
+    width: 200px;
+  }
+  .products-section .products-center .product-info p {
+    text-align: center;
+    margin-left: 30px;
+    font-size: 11px;
+  }
+  .products-section .products-center .products {
+    margin-top: 3em;
+    padding: 0 1em;
+    margin-left: 200px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-column-gap: 1.5em;
+    -webkit-transition: 0.8s ease-in;
+    transition: 0.8s ease-in;
+  }
+  .products-section .products-center .products .product-cpu {
+    width: 400px;
+  }
+  .products-section .products-center .products .product-cpu .cpu-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+    font-family: "Satisfy";
+  }
+  .products-section .products-center .products .product-cpu .cpu-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2em;
+    background-color: #2b2b2b;
+    width: 400px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .products-section .products-center .products .product-cpu .cpu-container .cpu-title {
+    color: #295b8a;
+    font-size: 0.7em;
+    width: 400px;
+    letter-spacing: 4px;
+  }
+  .products-section .products-center .products .product-cpu .cpu-container .info {
+    font-size: 3em;
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    position: absolute;
+    width: 400px;
+    top: 35%;
+    opacity: 0;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  .products-section .products-center .products .product-cpu .cpu-container img {
+    width: 400px;
+    height: auto;
+  }
+  .products-section .products-center .products .product-cpu .cpu-container .cpu-btn {
+    word-spacing: 2px;
+    padding: 0.7em 2em;
+    letter-spacing: 2px;
+    border: none;
+    background: #2b2b2b;
+    color: white;
+    border-radius: 10px;
+    min-width: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    top: 80%;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    cursor: pointer;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  .products-section .products-center .products .product-cpu .cpu-btn:hover {
+    color: black;
+    background-color: white;
+  }
+  .products-section .products-center .products .product-cpu .cpu:hover .info {
+    opacity: 1;
+  }
+  .products-section .products-center .products .product-cpu .cpu:hover .cpu-btn {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .products-section .products-center .products .product-cpu .cpu:hover .cpu-container img {
+    opacity: 0.2;
+  }
+  .products-section .products-center .products .product-gpu {
+    width: 400px;
+  }
+  .products-section .products-center .products .product-gpu .gpu-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+    font-family: "Satisfy";
+  }
+  .products-section .products-center .products .product-gpu .gpu-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2em;
+    background-color: #2b2b2b;
+    width: 400px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .products-section .products-center .products .product-gpu .gpu-container .gpu-title {
+    color: #295b8a;
+    font-size: 0.7em;
+    letter-spacing: 4px;
+    font-family: "Satisfy";
+    margin-left: 10px;
+    width: 400px;
+  }
+  .products-section .products-center .products .product-gpu .gpu-container .info {
+    font-size: 4em;
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    opacity: 0;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  .products-section .products-center .products .product-gpu .gpu-container img {
+    width: 400px;
+    height: auto;
+  }
+  .products-section .products-center .products .product-gpu .gpu-container .gpu-btn {
+    word-spacing: 2px;
+    padding: 0.7em 2em;
+    letter-spacing: 2px;
+    border: none;
+    background: #2b2b2b;
+    color: white;
+    border-radius: 10px;
+    min-width: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    top: 80%;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    cursor: pointer;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  .products-section .products-center .products .product-gpu .gpu-btn:hover {
+    color: black;
+    background-color: white;
+  }
+  .products-section .products-center .products .product-gpu .gpu:hover .info {
+    opacity: 1;
+  }
+  .products-section .products-center .products .product-gpu .gpu:hover .gpu-btn {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .products-section .products-center .products .product-gpu .gpu:hover .gpu-container img {
+    opacity: 0.3;
+  }
+  .products-section .products-center .product-info:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .products-section .products-center .button:hover button {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .game {
+    width: calc(100%);
+    height: calc(100% + 70px);
+    margin-bottom: 90px;
+    background: url("/images/com-background.png");
+  }
+  .game h2 {
+    color: #295b8a;
+    text-align: left;
+    padding: 3em;
+    margin-left: -2%;
+    font-family: "poppins";
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    margin-top: 2em;
+    font-size: 2em;
+  }
+  .game .game-center {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 0em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+  }
+  .game .game-center .game-container {
+    width: 350px;
+    margin-left: 60px;
+    position: relative;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .game .game-center img {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 100%;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+    -webkit-box-shadow: 20px 20px 20px black;
+            box-shadow: 20px 20px 20px black;
+  }
+  .game .game-center .average {
+    padding: 0.5em 1em;
+    min-width: 200px;
+    max-width: 300px;
+    font-size: 1.5em;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    position: absolute;
+    left: 25%;
+    top: 45%;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+    opacity: 0;
+    cursor: pointer;
+    outline: none;
+  }
+  .game .game-center .games:hover .average {
+    opacity: 1;
+  }
+  .game .game-center .games button:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    color: black;
+    background-color: white;
+  }
+  .game .game-center .games:hover .game-container {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
 footer .footer-center .social i {
   color: white;
 }
