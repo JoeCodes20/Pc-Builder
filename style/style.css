@@ -1359,6 +1359,7 @@ footer .footer-center .social i {
     display: none;
   }
   .nav-section .nav-center .nav-section .nav-center .menu {
+    position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1366,24 +1367,17 @@ footer .footer-center .social i {
         -ms-flex-pack: justify;
             justify-content: space-between;
     position: absolute;
-    width: 600px;
-    height: 600px;
+    width: 100px;
+    height: 100px;
+    top: 0;
     left: 40px;
     padding: 0 2em;
+    pointer-events: none;
   }
   .nav-section .nav-center .nav-section .nav-center .menu a {
     list-style: none;
     -webkit-text-decoration-line: none;
             text-decoration-line: none;
-  }
-  .nav-section .nav-center .nav-section .nav-center .menu .homeBtn {
-    position: absolute;
-    font-family: "Limelight", sans-serif;
-    letter-spacing: 2px;
-    color: white;
-    margin-left: -2em;
-    margin-right: -10em;
-    text-shadow: 10px 6px 10px black;
   }
   .nav-section .nav-center .nav-section .nav-center .menu .nav-name {
     position: absolute;
@@ -1400,15 +1394,6 @@ footer .footer-center .social i {
     color: white;
     margin: 0em 4em;
     display: none;
-  }
-  .nav-section .nav-center .nav-section .nav-center .menu .fa-ethereum {
-    position: absolute;
-    font-size: 2em;
-    background-color: white;
-    padding: 7.5px 15px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
   }
   .nav-section .nav-center .nav-section .nav-center .nav-name a:hover {
     color: #295b8a;
