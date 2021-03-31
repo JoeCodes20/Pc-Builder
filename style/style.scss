@@ -167,7 +167,7 @@ body {
   height: 40px;
   position: fixed;
   top: 20px;
-  z-index: 20;
+  z-index: 50;
   .nav-center {
     position: relative;
     display: flex;
@@ -260,7 +260,7 @@ body {
 }
 .bg-nav {
   position: fixed;
-  z-index: 19;
+  z-index: 29;
   background-color: rgb(88, 88, 88);
   width: 100%;
   height: 80px;
@@ -841,7 +841,7 @@ footer {
     height: 40px;
     position: fixed;
     top: 20px;
-    z-index: 20;
+    z-index: 50;
     .nav-center {
       display: flex;
       align-items: center;
@@ -1063,7 +1063,7 @@ footer {
     height: 40px;
     position: fixed;
     top: 20px;
-    z-index: 20;
+    z-index: 50;
     .nav-center {
       display: flex;
       align-items: center;
@@ -1080,7 +1080,7 @@ footer {
         height: 40px;
         position: fixed;
         top: 20px;
-        z-index: 20;
+        z-index: 50;
         .nav-center {
           display: flex;
           align-items: center;
@@ -1641,12 +1641,79 @@ footer {
   }
 }
 @media screen and (min-width: 700px) and (max-width: 899px) {
+  .game-page {
+    position: fixed;
+    // width: 700px;
+    // height: 900px;
+    top: 50%;
+    left: 50%;
+    background-color: bisque;
+    z-index: 99;
+    transition: 0.5s;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    .game-info-center {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      height: auto;
+      margin: 0 auto;
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 18px;
+        .fa-times {
+          font-size: 30px;
+          cursor: pointer;
+        }
+        .game-name {
+          font-size: 30px;
+          letter-spacing: 2px;
+          font-family: "poppins";
+        }
+      }
+      img {
+        width: 600px;
+        box-shadow: 10px 10px 500px rgb(0, 0, 0);
+      }
+      .game-path {
+        margin-top: 20px;
+        width: 200px;
+        height: 40px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        font-family: "poppins";
+        border-radius: 10px;
+        border: none;
+        color: white;
+        background-color: black;
+      }
+      .game-averages {
+        margin-top: 18px;
+        font-family: "poppins";
+      }
+      .game-info {
+        margin-top: 10px;
+        font-size: 14px;
+        font-family: "poppins";
+      }
+    }
+  }
+  .animation-s {
+    width: 400px;
+    height: 200px;
+  }
+  .animation-e {
+    width: 700px;
+    height: 900px;
+  }
   .nav-section {
     width: 100%;
     height: 40px;
     position: fixed;
     top: 20px;
-    z-index: 20;
+    z-index: 50;
     .nav-center {
       display: flex;
       align-items: center;
@@ -1663,7 +1730,7 @@ footer {
         height: 40px;
         position: fixed;
         top: 20px;
-        z-index: 20;
+        z-index: 50;
         .nav-center {
           display: flex;
           align-items: center;
@@ -2225,6 +2292,226 @@ footer {
   }
 }
 @media screen and (min-width: 350px) and (max-width: 699px) {
+  .game-page {
+    position: fixed;
+    // width: 700px;
+    // height: 900px;
+    top: 50%;
+    left: 50%;
+    background-color: bisque;
+    z-index: 99;
+    transition: 0.5s;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    .game-info-center {
+      display: flex;
+      flex-direction: column;
+      max-width: 350px;
+      height: auto;
+      margin: 0 auto;
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 18px;
+        .fa-times {
+          font-size: 30px;
+          cursor: pointer;
+        }
+        .game-name {
+          font-size: 30px;
+          letter-spacing: 2px;
+          font-family: "poppins";
+        }
+      }
+      img {
+        width: 400px;
+        margin-right: 20px;
+        box-shadow: 10px 10px 500px rgb(0, 0, 0);
+      }
+      .game-path {
+        margin-top: 20px;
+        width: 200px;
+        height: 40px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        font-family: "poppins";
+        border-radius: 10px;
+        border: none;
+        color: white;
+        background-color: black;
+      }
+      .game-averages {
+        margin-top: 18px;
+        font-family: "poppins";
+      }
+      .game-info {
+        margin-top: 10px;
+        font-size: 14px;
+        font-family: "poppins";
+      }
+    }
+  }
+  .animation-s {
+    width: 400px;
+    height: 200px;
+  }
+  .animation-e {
+    width: 500px;
+    height: 900px;
+  }
+  .nav-section {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 20px;
+    z-index: 50;
+    .nav-center {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2em;
+      max-width: 80%;
+      margin: 0 auto;
+      a {
+        list-style: none;
+        text-decoration-line: none;
+      }
+      .nav-section {
+        width: 100%;
+        height: 40px;
+        position: fixed;
+        top: 20px;
+        z-index: 50;
+        .nav-center {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 2em;
+          max-width: 1408px;
+          margin: 0 auto;
+          .fa-bars {
+            position: absolute;
+            left: 2000px;
+            font-size: 29em;
+            display: none;
+          }
+          .menu {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            left: 40px;
+            padding: 0 2em;
+            a {
+              list-style: none;
+              text-decoration-line: none;
+            }
+            .homeBtn {
+              position: absolute;
+              font-family: "Limelight", sans-serif;
+              letter-spacing: 2px;
+              color: white;
+              margin-left: -2em;
+              margin-right: -10em;
+              text-shadow: 10px 6px 10px black;
+            }
+            .nav-name {
+              position: absolute;
+              top: 0px;
+              left: 30%;
+              letter-spacing: 1px;
+              font-family: "poppins";
+              font-weight: smaller;
+              width: 100%;
+              text-shadow: 10px 6px 10px black;
+              padding: 0;
+              a {
+                color: white;
+                margin: 0em 4em;
+                display: none;
+              }
+            }
+            .fa-ethereum {
+              position: absolute;
+              font-size: 2em;
+              background-color: white;
+              padding: 7.5px 15px;
+              border: none;
+              border-radius: 50px;
+              cursor: pointer;
+              // right: 0;
+            }
+          }
+          .nav-name a:hover {
+            color: #295b8a;
+          }
+        }
+      }
+      .homeBtn {
+        position: absolute;
+        font-family: "Limelight", sans-serif;
+        letter-spacing: 2px;
+        color: white;
+        margin-left: -2em;
+        margin-right: -10em;
+        text-shadow: 10px 6px 10px black;
+      }
+      .nav-name {
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        letter-spacing: 1px;
+        font-family: "poppins";
+        font-weight: smaller;
+        width: 100%;
+        text-shadow: 10px 6px 10px black;
+        padding: 0;
+        a {
+          color: white;
+          margin: 0em 4em;
+          display: none;
+        }
+      }
+      i {
+        position: absolute;
+        font-size: 2em;
+        background-color: white;
+        padding: 7.5px 15px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        // right: 0;
+      }
+    }
+    .mobile-nav {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: 0.9;
+      transform: translateX(-608px);
+      transition: 0.4s;
+      a {
+        display: flex;
+        margin: 100px 150px;
+        color: white;
+        font-size: 30px;
+        font-family: "poppins";
+        list-style: none;
+        text-decoration-line: none;
+      }
+    }
+    .nav-name a:hover {
+      color: #295b8a;
+    }
+    .active {
+      transform: translateX(-120px);
+    }
+  }
   .service {
     height: 800px;
     position: relative;
@@ -2301,6 +2588,13 @@ footer {
       left: 50%;
     }
   }
+  .hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  footer .footer-center .social i {
+    margin: 0;
+  }
   .hero-section {
     display: flex;
     align-items: center;
@@ -2314,11 +2608,11 @@ footer {
       position: absolute;
       top: 300px;
       z-index: 8;
-      left: 150px;
+      left: 10px;
       text-shadow: 5px 10px 8px black;
       h1 {
         font-family: "poppins";
-        font-size: 4em;
+        font-size: 3em;
         letter-spacing: 2px;
         line-height: 80px;
       }
@@ -2326,7 +2620,7 @@ footer {
         max-width: 25em;
         margin-top: 20px;
         letter-spacing: 0.5px;
-        font-size: 1.3em;
+        font-size: 1em;
       }
       span {
         font-size: 1.6em;
@@ -2381,7 +2675,7 @@ footer {
     margin-bottom: 2em;
     position: relative;
     .products-center {
-      max-width: 708px;
+      max-width: 508px;
       margin: 0 auto;
       .product-title {
         text-align: left;
@@ -2391,6 +2685,7 @@ footer {
         text-transform: uppercase;
         color: #295b8a;
         z-index: 8;
+        font-size: 20px;
       }
       .product-buttons {
         display: flex;
@@ -2398,13 +2693,13 @@ footer {
         align-items: center;
         margin-top: 2em;
         .button {
-          padding: 1em 2em;
-          margin: 0 2em;
+          padding: 0.5em 1em;
+          margin: 0 1em;
           cursor: pointer;
           border-radius: 10px;
           border: none;
           font-family: "poppins";
-          font-size: 15px;
+          font-size: 10px;
           transition: 0.2s;
         }
         .btn1 {
@@ -2440,14 +2735,15 @@ footer {
           text-align: center;
           margin-left: 30px;
           font-size: 11px;
+          display: none;
         }
       }
       .products {
         margin-top: 3em;
         padding: 0 1em;
-        margin-left: 200px;
+        margin-left: 0%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         grid-column-gap: 1.5em;
         transition: 0.8s ease-in;
         .product-cpu {
@@ -2620,7 +2916,7 @@ footer {
       letter-spacing: 2px;
       word-spacing: 2px;
       margin-top: 2em;
-      font-size: 2em;
+      font-size: 1em;
     }
     .game-center {
       max-width: 100%;

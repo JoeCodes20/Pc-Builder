@@ -361,7 +361,7 @@ class Storage {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
   const path = new ProductBtn();
   const ui = new UI();
   ui.uiInfo();
@@ -704,23 +704,22 @@ function findGame() {
           explore();
         }
       });
+      function explore() {
+        gamePage.classList.remove("hidden");
+        gamePage.classList.remove("animtion-s");
+        gamePage.classList.add("animation-e");
+        buildOverlay.classList.remove("hidden");
+        const close = document.querySelector(".fa-times");
+        close.addEventListener("click", () => {
+          gamePage.classList.add("hidden");
+          buildOverlay.classList.add("hidden");
+        });
+      }
     }
     if (item === null) return;
   });
 }
 findGame();
-
-function explore() {
-  gamePage.classList.remove("hidden");
-  gamePage.classList.remove("animtion-s");
-  gamePage.classList.add("animation-e");
-  buildOverlay.classList.remove("hidden");
-  const close = document.querySelector(".fa-times");
-  close.addEventListener("click", () => {
-    gamePage.classList.add("hidden");
-    buildOverlay.classList.add("hidden");
-  });
-}
 
 function comModelClose() {
   let model = document.querySelector(".components-model");
