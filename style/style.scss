@@ -856,36 +856,32 @@ footer {
         display: none;
       }
       .menu {
-        position: absolute;
         display: flex;
         justify-content: space-between;
         position: absolute;
         width: 0px;
         height: 0px;
-        top: 0;
         left: 40px;
         padding: 0 2em;
-        pointer-events: none;
+        // display: none;
         a {
           list-style: none;
           text-decoration-line: none;
         }
-        .nav-name {
+        .homeBtn {
           position: absolute;
-          top: 0px;
-          left: 30%;
-          letter-spacing: 1px;
-          font-family: "poppins";
-          font-weight: smaller;
-          width: 100%;
+          font-family: "Limelight", sans-serif;
+          letter-spacing: 2px;
+          color: white;
+          top: 300px;
+          left: 0;
+          font-size: 1em;
+          transform: translate(-20px -50px);
+          // margin-left: -2em;
+          // margin-right: -10em;
           text-shadow: 10px 6px 10px black;
-          padding: 0;
-          a {
-            color: white;
-            margin: 0em 4em;
-            display: none;
-          }
         }
+      }
       .nav-name {
         position: absolute;
         top: 200px;
