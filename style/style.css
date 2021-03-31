@@ -2016,6 +2016,10 @@ footer .footer-center .social i {
     font-size: 14px;
     font-family: "poppins";
   }
+  .game-page .hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
   .animation-s {
     width: 400px;
     height: 200px;

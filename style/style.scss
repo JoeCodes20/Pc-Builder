@@ -1699,6 +1699,10 @@ footer {
         font-family: "poppins";
       }
     }
+    .hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
   .animation-s {
     width: 400px;
