@@ -379,6 +379,92 @@ const gamePage = document.querySelector(".game-page");
 const averages = document.querySelector(".game-averages");
 const gamePath = document.querySelector(".game-path");
 
+function gameApex(fps) {
+  return `
+  <div class="game-info-center">
+    <div class="top">
+        <i class="fas fa-times"></i>
+        <h2 class="game-name">Apex Legends</h2>
+    </div>
+    <img src="./images/games/Apexlegends.png" alt="">
+    <button class="game-path">pathname</button>
+    <h2 class="game-averages">Average Fps: ${fps}</h2>
+    <P class="game-info">Apex Legends is a free-to-play battle royale game developed by Respawn Entertainment and published by Electronic Arts. ... In Apex Legends, up to 20 three-person squads or 30 two-person duos land on an island and search for weapons and supplies before attempting to defeat all other players in combat.</P>
+  </div>
+  `;
+}
+function gameCsgo(fps) {
+  return `
+        <div class="game-info-center">
+          <div class="top">
+              <i class="fas fa-times"></i>
+              <h2 class="game-name">C.S.G.O</h2>
+          </div>
+          <img src="./images/games/Csgo.png" alt="">
+          <button class="game-path">pathname</button>
+          <h2 class="game-averages">Average Fps: ${fps}</h2>
+          <P class="game-info">Counter-Strike: Global Offensive (CS:GO) expands upon the team-based first person shooter gameplay the original Counter-Strike pioneered when it launched in 1999. Two teams compete in multiple rounds of objective-based game modes with the goal of winning enough rounds to win the match.</P>
+        </div>
+        `;
+}
+
+function gameCyberPunk(fps) {
+  return `
+  <div class="game-info-center">
+    <div class="top">
+        <i class="fas fa-times"></i>
+        <h2 class="game-name">Cyberpunk</h2>
+    </div>
+    <img src="./images/games/Cyberpunk.png" alt="">
+    <button class="game-path">pathname</button>
+    <h2 class="game-averages">Average Fps: ${fps}</h2>
+    <P class="game-info">Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. ... You can customize your character's cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.</P>
+    </div>
+    `;
+}
+function gameFortnite(fps) {
+  return `
+  <div class="game-info-center">
+    <div class="top">
+        <i class="fas fa-times"></i>
+        <h2 class="game-name">Fortnite</h2>
+    </div>
+    <img src="images/games/Fortnite.png" alt="">
+    <button class="game-path">pathname</button>
+    <h2 class="game-averages">Average Fps: 192</h2>
+    <P class="game-info">Fortnite is a survival game where 100 players fight against each other in player versus player combat to be the last one standing. It is a fast-paced, action-packed game, not unlike The Hunger Games, where strategic thinking is a must in order to survive.</P>
+    </div>
+    `;
+}
+function gameRocketLeage(fps) {
+  return `
+  <div class="game-info-center">
+    <div class="top">
+        <i class="fas fa-times"></i>
+        <h2 class="game-name">Rocketleage</h2>
+    </div>
+    <img src="images/games/Rocketleage.png" alt="">
+    <button class="game-path">pathname</button>
+    <h2 class="game-averages">Average Fps: ${fps}</h2>
+    <P class="game-info">Rocket League is a vehicular soccer video game developed and published by Psyonix. Described as "soccer, but with rocket-powered cars," Rocket League involves two teams that use rocket-powered vehicles to hit a ball into their opponent's goal and score points over the course of a match.</P>
+  </div>
+  `;
+}
+function gameWitcher(fps) {
+  return `
+<div class="game-info-center">
+  <div class="top">
+      <i class="fas fa-times"></i>
+      <h2 class="game-name">The Witcher</h2>
+  </div>
+  <img src="images/games/The-Witcher.png" alt="">
+  <button class="game-path">pathname</button>
+  <h2 class="game-averages">Average Fps: ${fps}</h2>
+  <P class="game-info">The Witcher 3: Wild Hunt is an action role-playing game with a third-person perspective. Players control Geralt of Rivia, a monster slayer known as a Witcher. Geralt walks, runs, rolls and dodges, and (for the first time in the series) jumps, climbs and swims.</P>
+</div>
+`;
+}
+
 function findGame() {
   let item = localStorage.getItem("path");
   [...gameExplore].forEach((btn) => {
@@ -389,50 +475,17 @@ function findGame() {
           let path = JSON.parse(localStorage.getItem("path"));
           let [select, sub] = path;
           if (select.id === 1) {
-            gamePage.innerHTML = `
-          <div class="game-info-center">
-            <div class="top">
-                <i class="fas fa-times"></i>
-                <h2 class="game-name">Apex Legends</h2>
-            </div>
-            <img src="./images/games/Apexlegends.png" alt="">
-            <button class="game-path">pathname</button>
-            <h2 class="game-averages">Average Fps: 81</h2>
-            <P class="game-info">Apex Legends is a free-to-play battle royale game developed by Respawn Entertainment and published by Electronic Arts. ... In Apex Legends, up to 20 three-person squads or 30 two-person duos land on an island and search for weapons and supplies before attempting to defeat all other players in combat.</P>
-          </div>
-          `;
+            gamePage.innerHTML = gameApex("81");
             document.querySelector(".game-info-center").children[2].innerText =
               "Budget";
           }
           if (select.id === 3) {
-            gamePage.innerHTML = `
-        <div class="game-info-center">
-          <div class="top">
-              <i class="fas fa-times"></i>
-              <h2 class="game-name">Apex Legends</h2>
-          </div>
-          <img src="./images/games/Apexlegends.png" alt="">
-          <button class="game-path">pathname</button>
-          <h2 class="game-averages">Average Fps: 138</h2>
-          <P class="game-info">Apex Legends is a free-to-play battle royale game developed by Respawn Entertainment and published by Electronic Arts. ... In Apex Legends, up to 20 three-person squads or 30 two-person duos land on an island and search for weapons and supplies before attempting to defeat all other players in combat.</P>
-        </div>
-        `;
+            gamePage.innerHTML = gameApex("138");
             document.querySelector(".game-info-center").children[2].innerText =
               "Performance";
           }
           if (select.id === 5) {
-            gamePage.innerHTML = `
-        <div class="game-info-center">
-          <div class="top">
-              <i class="fas fa-times"></i>
-              <h2 class="game-name">Apex Legends</h2>
-          </div>
-          <img src="./images/games/Apexlegends.png" alt="">
-          <button class="game-path">pathname</button>
-          <h2 class="game-averages">Average Fps: 264</h2>
-          <P class="game-info">Apex Legends is a free-to-play battle royale game developed by Respawn Entertainment and published by Electronic Arts. ... In Apex Legends, up to 20 three-person squads or 30 two-person duos land on an island and search for weapons and supplies before attempting to defeat all other players in combat.</P>
-        </div>
-        `;
+            gamePage.innerHTML = gameApex("264");
             document.querySelector(".game-info-center").children[2].innerText =
               "Enthusiast";
           }
@@ -442,50 +495,17 @@ function findGame() {
           let path = JSON.parse(localStorage.getItem("path"));
           let [select, sub] = path;
           if (select.id === 1) {
-            gamePage.innerHTML = `
-        <div class="game-info-center">
-          <div class="top">
-              <i class="fas fa-times"></i>
-              <h2 class="game-name">C.S.G.O</h2>
-          </div>
-          <img src="./images/games/Csgo.png" alt="">
-          <button class="game-path">pathname</button>
-          <h2 class="game-averages">Average Fps: 220</h2>
-          <P class="game-info">Counter-Strike: Global Offensive (CS:GO) expands upon the team-based first person shooter gameplay the original Counter-Strike pioneered when it launched in 1999. Two teams compete in multiple rounds of objective-based game modes with the goal of winning enough rounds to win the match.</P>
-        </div>
-        `;
+            gamePage.innerHTML = gameApex("180");
             document.querySelector(".game-info-center").children[2].innerText =
               "Budget";
           }
           if (select.id === 3) {
-            gamePage.innerHTML = `
-          <div class="game-info-center">
-            <div class="top">
-                <i class="fas fa-times"></i>
-                <h2 class="game-name">C.S.G.O</h2>
-            </div>
-            <img src="./images/games/Csgo.png" alt="">
-            <button class="game-path">pathname</button>
-            <h2 class="game-averages">Average Fps: 220</h2>
-            <P class="game-info">Counter-Strike: Global Offensive (CS:GO) expands upon the team-based first person shooter gameplay the original Counter-Strike pioneered when it launched in 1999. Two teams compete in multiple rounds of objective-based game modes with the goal of winning enough rounds to win the match.</P>
-          </div>
-          `;
+            gamePage.innerHTML = gameApex("220");
             document.querySelector(".game-info-center").children[2].innerText =
               "Performance";
           }
           if (select.id === 5) {
-            gamePage.innerHTML = `
-          <div class="game-info-center">
-            <div class="top">
-                <i class="fas fa-times"></i>
-                <h2 class="game-name">C.S.G.O</h2>
-            </div>
-            <img src="./images/games/Csgo.png" alt="">
-            <button class="game-path">pathname</button>
-            <h2 class="game-averages">Average Fps: 681</h2>
-            <P class="game-info">Counter-Strike: Global Offensive (CS:GO) expands upon the team-based first person shooter gameplay the original Counter-Strike pioneered when it launched in 1999. Two teams compete in multiple rounds of objective-based game modes with the goal of winning enough rounds to win the match.</P>
-          </div>
-          `;
+            gamePage.innerHTML = gameApex("681");
             document.querySelector(".game-info-center").children[2].innerText =
               "Enthusiast";
           }
@@ -495,50 +515,17 @@ function findGame() {
           let path = JSON.parse(localStorage.getItem("path"));
           let [select, sub] = path;
           if (select.id === 1) {
-            gamePage.innerHTML = `
-        <div class="game-info-center">
-          <div class="top">
-              <i class="fas fa-times"></i>
-              <h2 class="game-name">Cyberpunk</h2>
-          </div>
-          <img src="./images/games/Cyberpunk.png" alt="">
-          <button class="game-path">pathname</button>
-          <h2 class="game-averages">Average Fps: 43</h2>
-          <P class="game-info">Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. ... You can customize your character's cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.</P>
-          </div>
-          `;
+            gamePage.innerHTML = gameCyberPunk("43");
             document.querySelector(".game-info-center").children[2].innerText =
               "Budget";
           }
           if (select.id === 3) {
-            gamePage.innerHTML = `
-        <div class="game-info-center">
-          <div class="top">
-              <i class="fas fa-times"></i>
-              <h2 class="game-name">Cyberpunk</h2>
-          </div>
-          <img src="./images/games/Cyberpunk.png" alt="">
-          <button class="game-path">pathname</button>
-          <h2 class="game-averages">Average Fps: 68</h2>
-          <P class="game-info">Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. ... You can customize your character's cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.</P>
-        </div>
-        `;
+            gamePage.innerHTML = gameCyberPunk("68");
             document.querySelector(".game-info-center").children[2].innerText =
               "Performance";
           }
           if (select.id === 5) {
-            gamePage.innerHTML = `
-        <div class="game-info-center">
-          <div class="top">
-              <i class="fas fa-times"></i>
-              <h2 class="game-name">Cyberpunk</h2>
-          </div>
-          <img src="./images/games/Cyberpunk.png" alt="">
-          <button class="game-path">pathname</button>
-          <h2 class="game-averages">Average Fps: 145</h2>
-          <P class="game-info">Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. ... You can customize your character's cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.</P>
-        </div>
-        `;
+            gamePage.innerHTML = gameCyberPunk("145");
             document.querySelector(".game-info-center").children[2].innerText =
               "Enthusiast";
           }
@@ -548,50 +535,17 @@ function findGame() {
           let path = JSON.parse(localStorage.getItem("path"));
           let [select, sub] = path;
           if (select.id === 1) {
-            gamePage.innerHTML = `
-        <div class="game-info-center">
-          <div class="top">
-              <i class="fas fa-times"></i>
-              <h2 class="game-name">Fortnite</h2>
-          </div>
-          <img src="images/games/Fortnite.png" alt="">
-          <button class="game-path">pathname</button>
-          <h2 class="game-averages">Average Fps: 192</h2>
-          <P class="game-info">Fortnite is a survival game where 100 players fight against each other in player versus player combat to be the last one standing. It is a fast-paced, action-packed game, not unlike The Hunger Games, where strategic thinking is a must in order to survive.</P>
-          </div>
-          `;
+            gamePage.innerHTML = gameFortnite("192");
             document.querySelector(".game-info-center").children[2].innerText =
               "Budget";
           }
           if (select.id === 3) {
-            gamePage.innerHTML = `
-        <div class="game-info-center">
-          <div class="top">
-              <i class="fas fa-times"></i>
-              <h2 class="game-name">Fortnite</h2>
-          </div>
-          <img src="images/games/Fortnite.png" alt="">
-          <button class="game-path">pathname</button>
-          <h2 class="game-averages">Average Fps: 250</h2>
-          <P class="game-info">Fortnite is a survival game where 100 players fight against each other in player versus player combat to be the last one standing. It is a fast-paced, action-packed game, not unlike The Hunger Games, where strategic thinking is a must in order to survive.</P>
-        </div>
-        `;
+            gamePage.innerHTML = gameFortnite("250");
             document.querySelector(".game-info-center").children[2].innerText =
               "Performance";
           }
           if (select.id === 5) {
-            gamePage.innerHTML = `
-        <div class="game-info-center">
-          <div class="top">
-              <i class="fas fa-times"></i>
-              <h2 class="game-name">Fortnite</h2>
-          </div>
-          <img src="images/games/Fortnite.png" alt="">
-          <button class="game-path">pathname</button>
-          <h2 class="game-averages">Average Fps: 360</h2>
-          <P class="game-info">Fortnite is a survival game where 100 players fight against each other in player versus player combat to be the last one standing. It is a fast-paced, action-packed game, not unlike The Hunger Games, where strategic thinking is a must in order to survive.</P>
-        </div>
-        `;
+            gamePage.innerHTML = gameFortnite("360");
             document.querySelector(".game-info-center").children[2].innerText =
               "Enthusiast";
           }
@@ -601,50 +555,17 @@ function findGame() {
           let path = JSON.parse(localStorage.getItem("path"));
           let [select, sub] = path;
           if (select.id === 1) {
-            gamePage.innerHTML = `
-          <div class="game-info-center">
-            <div class="top">
-                <i class="fas fa-times"></i>
-                <h2 class="game-name">Rocketleage</h2>
-            </div>
-            <img src="images/games/Rocketleage.png" alt="">
-            <button class="game-path">pathname</button>
-            <h2 class="game-averages">Average Fps: 180</h2>
-            <P class="game-info">Rocket League is a vehicular soccer video game developed and published by Psyonix. Described as "soccer, but with rocket-powered cars," Rocket League involves two teams that use rocket-powered vehicles to hit a ball into their opponent's goal and score points over the course of a match.</P>
-          </div>
-          `;
+            gamePage.innerHTML = gameRocketLeage("180");
             document.querySelector(".game-info-center").children[2].innerText =
               "Budget";
           }
           if (select.id === 3) {
-            gamePage.innerHTML = `
-        <div class="game-info-center">
-          <div class="top">
-              <i class="fas fa-times"></i>
-              <h2 class="game-name">Rocketleage</h2>
-          </div>
-          <img src="images/games/Rocketleage.png" alt="">
-          <button class="game-path">pathname</button>
-          <h2 class="game-averages">Average Fps: 238</h2>
-          <P class="game-info">Rocket League is a vehicular soccer video game developed and published by Psyonix. Described as "soccer, but with rocket-powered cars," Rocket League involves two teams that use rocket-powered vehicles to hit a ball into their opponent's goal and score points over the course of a match.</P>
-        </div>
-        `;
+            gamePage.innerHTML = gameRocketLeage("238");
             document.querySelector(".game-info-center").children[2].innerText =
               "Performance";
           }
           if (select.id === 5) {
-            gamePage.innerHTML = `
-        <div class="game-info-center">
-          <div class="top">
-              <i class="fas fa-times"></i>
-              <h2 class="game-name">Rocketleage</h2>
-          </div>
-          <img src="images/games/Rocketleage.png" alt="">
-          <button class="game-path">pathname</button>
-          <h2 class="game-averages">Average Fps: 908</h2>
-          <P class="game-info">Rocket League is a vehicular soccer video game developed and published by Psyonix. Described as "soccer, but with rocket-powered cars," Rocket League involves two teams that use rocket-powered vehicles to hit a ball into their opponent's goal and score points over the course of a match.</P>
-        </div>
-        `;
+            gamePage.innerHTML = gameRocketLeage("908");
             document.querySelector(".game-info-center").children[2].innerText =
               "Enthusiast";
           }
@@ -654,50 +575,17 @@ function findGame() {
           let path = JSON.parse(localStorage.getItem("path"));
           let [select, sub] = path;
           if (select.id === 1) {
-            gamePage.innerHTML = `
-        <div class="game-info-center">
-          <div class="top">
-              <i class="fas fa-times"></i>
-              <h2 class="game-name">The Witcher</h2>
-          </div>
-          <img src="images/games/The-Witcher.png" alt="">
-          <button class="game-path">pathname</button>
-          <h2 class="game-averages">Average Fps: 76</h2>
-          <P class="game-info">The Witcher 3: Wild Hunt is an action role-playing game with a third-person perspective. Players control Geralt of Rivia, a monster slayer known as a Witcher. Geralt walks, runs, rolls and dodges, and (for the first time in the series) jumps, climbs and swims.</P>
-        </div>
-        `;
+            gamePage.innerHTML = gameWitcher("76");
             document.querySelector(".game-info-center").children[2].innerText =
               "Budget";
           }
           if (select.id === 3) {
-            gamePage.innerHTML = `
-        <div class="game-info-center">
-          <div class="top">
-              <i class="fas fa-times"></i>
-              <h2 class="game-name">The Witcher</h2>
-          </div>
-          <img src="images/games/The-Witcher.png" alt="">
-          <button class="game-path">pathname</button>
-          <h2 class="game-averages">Average Fps: 98</h2>
-          <P class="game-info">The Witcher 3: Wild Hunt is an action role-playing game with a third-person perspective. Players control Geralt of Rivia, a monster slayer known as a Witcher. Geralt walks, runs, rolls and dodges, and (for the first time in the series) jumps, climbs and swims.</P>
-        </div>
-        `;
+            gamePage.innerHTML = gameWitcher("98");
             document.querySelector(".game-info-center").children[2].innerText =
               "Performance";
           }
           if (select.id === 5) {
-            gamePage.innerHTML = `
-        <div class="game-info-center">
-          <div class="top">
-              <i class="fas fa-times"></i>
-              <h2 class="game-name">The Witcher</h2>
-          </div>
-          <img src="images/games/The-Witcher.png" alt="">
-          <button class="game-path">pathname</button>
-          <h2 class="game-averages">Average Fps: 178</h2>
-          <P class="game-info">The Witcher 3: Wild Hunt is an action role-playing game with a third-person perspective. Players control Geralt of Rivia, a monster slayer known as a Witcher. Geralt walks, runs, rolls and dodges, and (for the first time in the series) jumps, climbs and swims.</P>
-        </div>
-        `;
+            gamePage.innerHTML = gameWitcher("178");
             document.querySelector(".game-info-center").children[2].innerText =
               "Enthusiast";
           }
