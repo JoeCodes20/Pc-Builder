@@ -431,7 +431,7 @@ function gameFortnite(fps) {
     </div>
     <img src="images/games/Fortnite.png" alt="">
     <button class="game-path">pathname</button>
-    <h2 class="game-averages">Average Fps: 192</h2>
+    <h2 class="game-averages">Average Fps: ${fps}</h2>
     <P class="game-info">Fortnite is a survival game where 100 players fight against each other in player versus player combat to be the last one standing. It is a fast-paced, action-packed game, not unlike The Hunger Games, where strategic thinking is a must in order to survive.</P>
     </div>
     `;
