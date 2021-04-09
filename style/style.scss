@@ -446,6 +446,8 @@ body {
       }
     }
     .product-info {
+      background: url("/images/com-background.png");
+      background-position: center;
       display: flex;
       align-items: center;
       padding: 2em 6em;
@@ -457,6 +459,8 @@ body {
       letter-spacing: 2px;
       border-radius: 10px;
       box-shadow: 10px 10px 40px black;
+      color: white;
+      text-shadow: 10px 10px 10px black;
       // background-color: #295b8a;
       img {
         width: 200px;
