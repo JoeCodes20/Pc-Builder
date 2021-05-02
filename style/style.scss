@@ -1638,6 +1638,7 @@ footer {
     background-color: bisque;
     z-index: 99;
     transition: 0.5s;
+
     transform: translate(-50%, -50%);
     opacity: 1;
     .game-info-center {
@@ -1650,6 +1651,8 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-top: 2em;
+
         margin-bottom: 18px;
         .fa-times {
           font-size: 30px;
@@ -2305,7 +2308,8 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 18px;
+        // margin-bottom: 18px;
+        margin-top: 2em;
         .fa-times {
           font-size: 30px;
           cursor: pointer;
